@@ -1,0 +1,3128 @@
+
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PROVEXIS PCM | Consultoria, Engenharia da Manutenção e Plataforma Própria</title>
+  <meta name="description" content="Da manutenção reativa ao controle total. Implantamos Planejamento e Controle da Manutenção (PCM), estruturamos ativos, planos preventivos e plataforma própria para indústrias." />
+  <meta name="keywords" content="PROVEXIS PCM, Planejamento e Controle da Manutenção, Engenharia da Manutenção, Consultoria PCM, Software PCM, Gestão de Ativos, Planos Preventivos, MTBF, MTTR, São José dos Pinhais" />
+  <meta name="author" content="PROVEXIS PCM" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.provexis.com.br/" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="PROVEXIS PCM" />
+  <meta property="og:title" content="PROVEXIS PCM — Da manutenção reativa ao controle total." />
+  <meta property="og:description" content="Consultoria, Engenharia da Manutenção e Implantação de PCM com Plataforma Própria. Mais disponibilidade. Menos paradas. Mais controle." />
+  <meta property="og:url" content="https://www.provexis.com.br/" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Schema.org JSON-LD para SEO Industrial -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "PROVEXIS PCM",
+        "slogan": "Performance que se prova.",
+        "url": "https://www.provexis.com.br",
+        "email": "contato@provexis.com.br",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "São José dos Pinhais",
+          "addressRegion": "PR",
+          "addressCountry": "BR"
+        }
+      },
+      {
+        "@type": "ProfessionalService",
+        "name": "PROVEXIS PCM",
+        "slogan": "Performance que se prova.",
+        "description": "Consultoria, Engenharia da Manutenção e Implantação de PCM com Plataforma Própria.",
+        "url": "https://www.provexis.com.br",
+        "email": "contato@provexis.com.br",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "São José dos Pinhais",
+          "addressRegion": "PR",
+          "addressCountry": "BR"
+        },
+        "areaServed": "BR",
+        "knowsAbout": [
+          "Implantação de PCM",
+          "Estruturação de Ativos",
+          "Engenharia da Manutenção",
+          "Planos Preventivos",
+          "Gestão de Estoque Técnico",
+          "Governança da Manutenção",
+          "Indicadores de Performance Industrial",
+          "Treinamentos Operacionais",
+          "Plataforma PROVEXIS PCM"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* =========================================================
+       DESIGN TOKENS & VARIÁVEIS INDUSTRIAIS PROVEXIS
+    ========================================================== */
+    :root {
+      --bg-black: #060709;
+      --bg-graphite: #101216;
+      --bg-panel: #181B22;
+      --bg-panel-alt: #13161C;
+      --border-steel: #262B36;
+      --border-steel-light: #353C4B;
+      --text-white: #F8FAFC;
+      --text-silver: #C8CED8;
+      --text-muted: #8E95A2;
+      --brand-red: #FF1E00;
+      --brand-orange: #FF4D00;
+      --brand-glow: rgba(255, 30, 0, 0.28);
+      --brand-glow-strong: rgba(255, 30, 0, 0.45);
+      --status-green: #10B981;
+      --status-amber: #F59E0B;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 22px;
+      --transition: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* =========================================================
+       RESET & BASE MOBILE FIRST
+    ========================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg-black);
+      color: var(--text-white);
+      font-family: var(--font-sans);
+      line-height: 1.5;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      background-color: var(--bg-black);
+      color: var(--text-white);
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input, select, textarea {
+      font-family: inherit;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* =========================================================
+       UTILITÁRIOS DE LAYOUT & SUPERFÍCIES INDUSTRIAIS
+    ========================================================== */
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        padding: 0 2rem;
+      }
+    }
+
+    .bg-grid {
+      background-size: 42px 42px;
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    }
+
+    .section-dark {
+      background-color: var(--bg-black);
+      border-bottom: 1px solid var(--border-steel);
+    }
+
+    .section-graphite {
+      background-color: var(--bg-graphite);
+      border-bottom: 1px solid var(--border-steel);
+    }
+
+    .section-pad {
+      padding: 4.5rem 0;
+    }
+
+    @media (min-width: 1024px) {
+      .section-pad {
+        padding: 6.25rem 0;
+      }
+    }
+
+    /* Cartão de Aço Escovado */
+    .brushed-card {
+      background: linear-gradient(145deg, #1A1E26 0%, #11141A 55%, #181B22 100%);
+      border: 1px solid var(--border-steel);
+      border-radius: var(--radius-lg);
+      box-shadow: 0 14px 32px -12px rgba(0, 0, 0, 0.78);
+      transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+    }
+
+    .brushed-card:hover {
+      border-color: rgba(255, 30, 0, 0.5);
+      transform: translateY(-3px);
+    }
+
+    .telemetry-top {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .telemetry-top::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--brand-red) 0%, var(--brand-orange) 50%, transparent 100%);
+    }
+
+    /* =========================================================
+       TIPOGRAFIA & CABEÇALHOS DE SEÇÃO
+    ========================================================== */
+    .section-header {
+      max-width: 780px;
+      margin: 0 auto 3.25rem auto;
+      text-align: center;
+    }
+
+    .eyebrow-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--brand-red);
+      background: rgba(255, 30, 0, 0.1);
+      border: 1px solid rgba(255, 30, 0, 0.35);
+      padding: 0.38rem 0.85rem;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.75rem, 3.8vw, 2.85rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--text-white);
+      margin-bottom: 1rem;
+    }
+
+    .section-subtitle {
+      font-size: clamp(1rem, 1.6vw, 1.125rem);
+      color: var(--text-silver);
+      line-height: 1.65;
+    }
+
+    .section-subtitle strong {
+      color: var(--text-white);
+      font-weight: 600;
+    }
+
+    /* =========================================================
+       BOTÕES DE ALTA CONVERSÃO
+    ========================================================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 0.95rem 1.65rem;
+      border-radius: var(--radius-md);
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all var(--transition);
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--brand-red) 0%, var(--brand-orange) 100%);
+      color: #FFFFFF;
+      box-shadow: 0 0 28px var(--brand-glow);
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--brand-orange) 0%, var(--brand-red) 100%);
+      box-shadow: 0 0 42px var(--brand-glow-strong);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: var(--bg-panel);
+      color: var(--text-white);
+      border-color: var(--border-steel-light);
+    }
+
+    .btn-secondary:hover {
+      background: #222731;
+      border-color: var(--text-silver);
+      transform: translateY(-2px);
+    }
+
+    .btn-sm {
+      padding: 0.65rem 1.2rem;
+      font-size: 0.875rem;
+    }
+
+    .btn-full {
+      width: 100%;
+    }
+
+    /* =========================================================
+       HEADER & NAVEGAÇÃO FIXA
+    ========================================================== */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(6, 7, 9, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-steel);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 78px;
+      gap: 1rem;
+    }
+
+    .brand-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    .brand-svg {
+      width: 40px;
+      height: 45px;
+      flex-shrink: 0;
+    }
+
+    .brand-text-wrap {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .brand-title-row {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .brand-name {
+      font-weight: 800;
+      font-size: 1.35rem;
+      letter-spacing: 0.08em;
+      color: var(--text-white);
+    }
+
+    .brand-tag {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 0.18rem 0.42rem;
+      border-radius: 4px;
+      background: rgba(255, 30, 0, 0.15);
+      color: var(--brand-red);
+      border: 1px solid rgba(255, 30, 0, 0.45);
+    }
+
+    .brand-slogan {
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.21em;
+      color: var(--text-silver);
+      text-transform: uppercase;
+      margin-top: 0.35rem;
+    }
+
+    .desktop-nav {
+      display: none;
+      align-items: center;
+      gap: 1.35rem;
+    }
+
+    @media (min-width: 1060px) {
+      .desktop-nav {
+        display: flex;
+      }
+    }
+
+    .desktop-nav a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-silver);
+      transition: color 0.2s ease;
+    }
+
+    .desktop-nav a:hover {
+      color: var(--text-white);
+    }
+
+    .header-actions {
+      display: none;
+    }
+
+    @media (min-width: 640px) {
+      .header-actions {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .mobile-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-sm);
+      background: var(--bg-panel);
+      border: 1px solid var(--border-steel);
+      color: var(--text-white);
+      cursor: pointer;
+    }
+
+    @media (min-width: 1060px) {
+      .mobile-toggle {
+        display: none;
+      }
+    }
+
+    .mobile-drawer {
+      display: none;
+      background: var(--bg-graphite);
+      border-bottom: 1px solid var(--border-steel);
+      padding: 1rem 1.25rem 1.5rem;
+    }
+
+    .mobile-drawer.is-open {
+      display: block;
+    }
+
+    .mobile-drawer a {
+      display: block;
+      padding: 0.75rem 0.9rem;
+      border-radius: var(--radius-sm);
+      font-weight: 500;
+      color: var(--text-silver);
+    }
+
+    .mobile-drawer a:hover {
+      background: var(--bg-panel);
+      color: var(--text-white);
+    }
+
+    /* =========================================================
+       SEÇÃO 1: HERO
+    ========================================================== */
+    .hero-section {
+      position: relative;
+      padding-top: calc(78px + 3.5rem);
+      padding-bottom: 4.5rem;
+      overflow: hidden;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-section {
+        padding-top: calc(78px + 5rem);
+        padding-bottom: 6rem;
+      }
+    }
+
+    .hero-glow-left {
+      position: absolute;
+      top: -110px;
+      left: -120px;
+      width: 440px;
+      height: 440px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 30, 0, 0.16) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-glow-right {
+      position: absolute;
+      bottom: -140px;
+      right: -100px;
+      width: 480px;
+      height: 480px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 77, 0, 0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.75rem;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 3rem;
+      }
+    }
+
+    .positioning-pill {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      background: var(--bg-panel);
+      border: 1px solid var(--border-steel);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-silver);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 1.35rem;
+    }
+
+    .beacon-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--brand-red);
+      box-shadow: 0 0 10px var(--brand-red);
+      animation: pulseDot 2s infinite ease-in-out;
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.45; transform: scale(1.3); }
+    }
+
+    .hero-kicker {
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      color: var(--brand-red);
+      text-transform: uppercase;
+      margin-bottom: 0.55rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.15rem, 4.8vw, 3.65rem);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+      color: var(--text-white);
+      margin-bottom: 1.35rem;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1rem, 1.55vw, 1.15rem);
+      color: var(--text-silver);
+      line-height: 1.68;
+      max-width: 640px;
+      margin-bottom: 1.75rem;
+    }
+
+    .hero-pillars {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (min-width: 640px) {
+      .hero-pillars {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .pillar-box {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 0.85rem 1rem;
+      border-radius: var(--radius-md);
+      background: var(--bg-panel);
+      border: 1px solid var(--border-steel);
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text-white);
+    }
+
+    .pillar-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 7px;
+      background: rgba(255, 30, 0, 0.14);
+      border: 1px solid rgba(255, 30, 0, 0.35);
+      color: var(--brand-red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    @media (min-width: 540px) {
+      .hero-cta-group {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+
+    /* Console de Telemetria Hero */
+    .telemetry-console {
+      padding: 1.4rem;
+    }
+
+    @media (min-width: 640px) {
+      .telemetry-console {
+        padding: 1.75rem;
+      }
+    }
+
+    .console-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 1rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border-steel);
+      gap: 0.5rem;
+    }
+
+    .console-title {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--text-white);
+    }
+
+    .status-green-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--status-green);
+      box-shadow: 0 0 8px var(--status-green);
+    }
+
+    .console-tag {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      padding: 0.22rem 0.55rem;
+      border-radius: 5px;
+      background: var(--bg-black);
+      border: 1px solid var(--border-steel);
+      color: var(--text-silver);
+    }
+
+    .console-kpi-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.85rem;
+      margin-bottom: 1.15rem;
+    }
+
+    .console-kpi {
+      background: rgba(6, 7, 9, 0.82);
+      border: 1px solid var(--border-steel);
+      border-radius: var(--radius-md);
+      padding: 0.95rem;
+    }
+
+    .console-kpi-label {
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+      font-size: 0.66rem;
+      color: var(--text-muted);
+      margin-bottom: 0.35rem;
+    }
+
+    .console-kpi-val {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--text-white);
+      line-height: 1.1;
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 5px;
+      background: var(--bg-panel);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-top: 0.65rem;
+    }
+
+    .progress-fill-green {
+      height: 100%;
+      width: 97.4%;
+      background: linear-gradient(90deg, var(--brand-red), var(--status-green));
+    }
+
+    .progress-fill-red {
+      height: 100%;
+      width: 94.2%;
+      background: var(--brand-red);
+    }
+
+    .console-tree {
+      background: rgba(6, 7, 9, 0.82);
+      border: 1px solid var(--border-steel);
+      border-radius: var(--radius-md);
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .console-tree-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.7rem;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--text-silver);
+    }
+
+    .tree-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.55rem 0.75rem;
+      background: var(--bg-panel);
+      border: 1px solid rgba(38, 43, 54, 0.85);
+      border-radius: 7px;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .tree-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .console-footer-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.65rem;
+      text-align: center;
+      font-family: var(--font-mono);
+    }
+
+    .mini-metric {
+      background: var(--bg-panel-alt);
+      border: 1px solid var(--border-steel);
+      border-radius: 8px;
+      padding: 0.6rem 0.4rem;
+    }
+
+    .mini-metric span {
+      display: block;
+      font-size: 0.64rem;
+      color: var(--text-muted);
+    }
+
+    .mini-metric strong {
+      font-size: 0.88rem;
+      color: var(--text-white);
+    }
+
+    /* =========================================================
+       GRIDS RESPONSIVOS PARA CARDS
+    ========================================================== */
+    .grid-cards-4 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.15rem;
+    }
+
+    @media (min-width: 640px) {
+      .grid-cards-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .grid-cards-4 {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .grid-cards-3 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.35rem;
+    }
+
+    @media (min-width: 768px) {
+      .grid-cards-3 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .grid-cards-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* =========================================================
+       SEÇÃO 2: PROBLEMAS
+    ========================================================== */
+    .problem-card {
+      padding: 1.35rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.9rem;
+    }
+
+    @media (min-width: 1024px) {
+      .problem-card-wide {
+        grid-column: span 2;
+      }
+    }
+
+    .icon-box-red {
+      width: 38px;
+      height: 38px;
+      border-radius: 9px;
+      background: rgba(255, 30, 0, 0.14);
+      border: 1px solid rgba(255, 30, 0, 0.38);
+      color: var(--brand-red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .risk-tag {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-bottom: 0.2rem;
+    }
+
+    .problem-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-white);
+      line-height: 1.35;
+    }
+
+    .problem-card p {
+      font-size: 0.84rem;
+      color: var(--text-silver);
+      margin-top: 0.35rem;
+    }
+
+    .alert-banner {
+      margin-top: 2.5rem;
+      padding: 1.65rem;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(90deg, rgba(255, 30, 0, 0.16) 0%, var(--bg-panel) 55%, var(--bg-panel) 100%);
+      border: 1px solid rgba(255, 30, 0, 0.45);
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    @media (min-width: 768px) {
+      .alert-banner {
+        flex-direction: row;
+        align-items: center;
+        padding: 2rem;
+      }
+    }
+
+    .alert-banner-left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .alert-icon-solid {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      background: var(--brand-red);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 0 24px var(--brand-glow);
+    }
+
+    .alert-banner p {
+      font-size: clamp(1.05rem, 2vw, 1.28rem);
+      font-weight: 700;
+      color: var(--text-white);
+      line-height: 1.35;
+    }
+
+    /* =========================================================
+       SEÇÃO 3: SOLUÇÃO PROVEXIS
+    ========================================================== */
+    .solution-card {
+      padding: 1.75rem;
+    }
+
+    .solution-card-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.25rem;
+    }
+
+    .solution-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      background: rgba(255, 30, 0, 0.14);
+      border: 1px solid rgba(255, 30, 0, 0.38);
+      color: var(--brand-red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .solution-icon-solid {
+      background: var(--brand-red);
+      color: #FFFFFF;
+      border-color: var(--brand-red);
+      box-shadow: 0 0 24px var(--brand-glow);
+    }
+
+    .solution-num {
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+
+    .solution-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-white);
+      margin-bottom: 0.5rem;
+    }
+
+    .solution-card p {
+      font-size: 0.95rem;
+      color: var(--text-silver);
+      line-height: 1.6;
+    }
+
+    /* =========================================================
+       SEÇÃO 4: METODOLOGIA (TIMELINE VISUAL)
+    ========================================================== */
+    .timeline-wrapper {
+      max-width: 920px;
+      margin: 0 auto;
+      position: relative;
+      padding-left: 2rem;
+      border-left: 2px solid rgba(255, 30, 0, 0.55);
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+
+    @media (min-width: 640px) {
+      .timeline-wrapper {
+        padding-left: 2.75rem;
+      }
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 1.65rem;
+    }
+
+    .timeline-node {
+      position: absolute;
+      left: -2.65rem;
+      top: 1.75rem;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--brand-red);
+      border: 3px solid var(--bg-graphite);
+      box-shadow: 0 0 16px var(--brand-red);
+    }
+
+    @media (min-width: 640px) {
+      .timeline-node {
+        left: -3.4rem;
+      }
+    }
+
+    .timeline-node-final {
+      background: var(--status-green);
+      box-shadow: 0 0 16px var(--status-green);
+    }
+
+    .timeline-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .phase-badge {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.25rem 0.65rem;
+      border-radius: 6px;
+      background: rgba(255, 30, 0, 0.15);
+      color: var(--brand-red);
+      border: 1px solid rgba(255, 30, 0, 0.38);
+    }
+
+    .phase-badge-solid {
+      background: var(--brand-red);
+      color: #FFFFFF;
+    }
+
+    .phase-badge-green {
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--status-green);
+      border-color: rgba(16, 185, 129, 0.4);
+    }
+
+    .phase-code {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    .timeline-item h3 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text-white);
+      margin-bottom: 0.85rem;
+    }
+
+    .deliverables-label {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-silver);
+      margin-bottom: 0.65rem;
+    }
+
+    .deliverables-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.55rem;
+    }
+
+    @media (min-width: 640px) {
+      .deliverables-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .deliverables-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-size: 0.92rem;
+      color: var(--text-silver);
+    }
+
+    .deliverables-list li::before {
+      content: "▪";
+      color: var(--brand-red);
+      font-weight: 800;
+    }
+
+    /* Hierarquia da Fase 1 */
+    .hierarchy-box {
+      background: rgba(6, 7, 9, 0.88);
+      border: 1px solid var(--border-steel);
+      border-radius: var(--radius-md);
+      padding: 1rem;
+      margin-bottom: 1.15rem;
+    }
+
+    .hierarchy-flow {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.45rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      margin-top: 0.55rem;
+    }
+
+    .hierarchy-node {
+      padding: 0.42rem 0.75rem;
+      border-radius: 7px;
+      background: var(--bg-panel);
+      border: 1px solid var(--border-steel-light);
+      color: var(--text-white);
+      font-weight: 600;
+    }
+
+    .hierarchy-node-active {
+      background: rgba(255, 30, 0, 0.18);
+      border-color: rgba(255, 30, 0, 0.55);
+    }
+
+    .hierarchy-arrow {
+      color: var(--brand-red);
+      font-weight: 800;
+    }
+
+    /* =========================================================
+       SEÇÃO 5: PLATAFORMA PROVEXIS PCM
+    ========================================================== */
+    .platform-showcase {
+      padding: 1.5rem;
+      margin-bottom: 2.25rem;
+    }
+
+    @media (min-width: 768px) {
+      .platform-showcase {
+        padding: 2rem;
+      }
+    }
+
+    .platform-tabs-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-bottom: 1.25rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-steel);
+    }
+
+    .tabs-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+    }
+
+    .tab-btn {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 0.55rem 0.95rem;
+      border-radius: 8px;
+      background: var(--bg-black);
+      color: var(--text-silver);
+      border: 1px solid var(--border-steel);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .tab-btn:hover {
+      color: var(--text-white);
+      border-color: var(--border-steel-light);
+    }
+
+    .tab-btn.active {
+      background: var(--brand-red);
+      color: #FFFFFF;
+      border-color: var(--brand-red);
+      box-shadow: 0 0 18px var(--brand-glow);
+    }
+
+    .browser-frame {
+      background: var(--bg-black);
+      border: 1px solid var(--border-steel);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+
+    .browser-top {
+      background: var(--bg-panel);
+      border-bottom: 1px solid var(--border-steel);
+      padding: 0.65rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    .browser-dots {
+      display: flex;
+      gap: 0.4rem;
+    }
+
+    .browser-dots span {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .browser-url {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-silver);
+      background: var(--bg-black);
+      border: 1px solid var(--border-steel);
+      padding: 0.25rem 0.85rem;
+      border-radius: 6px;
+    }
+
+    .browser-body {
+      padding: 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    @media (min-width: 1024px) {
+      .browser-body {
+        grid-template-columns: 0.95fr 1.05fr;
+        padding: 2rem;
+      }
+    }
+
+    .screenshot-slot {
+      margin-top: 1rem;
+      padding: 0.9rem 1rem;
+      border-radius: 9px;
+      background: rgba(24, 27, 34, 0.85);
+      border: 1px dashed var(--border-steel-light);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-silver);
+      line-height: 1.5;
+    }
+
+    .screen-mockup-panel {
+      background: var(--bg-panel);
+      border: 1px solid var(--border-steel);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+    }
+
+    .bar-chart {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 0.55rem;
+      align-items: end;
+      height: 115px;
+      padding-top: 0.75rem;
+    }
+
+    .bar-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.35rem;
+      height: 100%;
+      justify-content: flex-end;
+    }
+
+    .bar-fill {
+      width: 100%;
+      border-radius: 5px 5px 0 0;
+      background: var(--brand-red);
+    }
+
+    .module-card {
+      padding: 1.35rem;
+    }
+
+    .module-code {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--brand-red);
+      display: block;
+      margin-bottom: 0.35rem;
+    }
+
+    .module-card h3 {
+      font-size: 1.12rem;
+      font-weight: 700;
+      color: var(--text-white);
+      margin-bottom: 0.35rem;
+    }
+
+    .module-card p {
+      font-size: 0.88rem;
+      color: var(--text-silver);
+    }
+
+    /* =========================================================
+       SEÇÃO 6: INDICADORES
+    ========================================================== */
+    .kpi-card {
+      padding: 1.5rem;
+    }
+
+    .kpi-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.85rem;
+    }
+
+    .kpi-badge {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.22rem 0.55rem;
+      border-radius: 5px;
+      background: rgba(255, 30, 0, 0.14);
+      color: var(--brand-red);
+      border: 1px solid rgba(255, 30, 0, 0.35);
+    }
+
+    .kpi-category {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--status-green);
+    }
+
+    .kpi-card h3 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text-white);
+      margin-bottom: 0.35rem;
+    }
+
+    .kpi-card p {
+      font-size: 0.9rem;
+      color: var(--text-silver);
+    }
+
+    /* =========================================================
+       SEÇÃO 8: SEGMENTOS
+    ========================================================== */
+    .segment-pill {
+      padding: 1.25rem 1.35rem;
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--text-white);
+    }
+
+    .segment-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--brand-red);
+      flex-shrink: 0;
+    }
+
+    /* =========================================================
+       SEÇÃO 9: ENTREGÁVEIS
+    ========================================================== */
+    .deliverable-item {
+      padding: 1.25rem 1.35rem;
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      font-weight: 600;
+      font-size: 0.98rem;
+      color: var(--text-white);
+    }
+
+    .check-badge {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: rgba(16, 185, 129, 0.14);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: var(--status-green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* =========================================================
+       SEÇÃO 10: SOBRE A PROVEXIS
+    ========================================================== */
+    .about-box {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .about-box {
+        padding: 3rem;
+      }
+    }
+
+    .about-quote {
+      margin: 1.5rem 0;
+      padding: 1.5rem;
+      border-radius: var(--radius-md);
+      background: rgba(6, 7, 9, 0.9);
+      border-left: 4px solid var(--brand-red);
+      font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+      font-weight: 800;
+      color: var(--text-white);
+      line-height: 1.38;
+    }
+
+    /* =========================================================
+       SEÇÃO 11: CTA FINAL & FORMULÁRIO DE DIAGNÓSTICO
+    ========================================================== */
+    .cta-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    @media (min-width: 1024px) {
+      .cta-grid {
+        grid-template-columns: 0.95fr 1.05fr;
+        gap: 3.25rem;
+      }
+    }
+
+    .cta-trust-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-steel);
+    }
+
+    @media (min-width: 540px) {
+      .cta-trust-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .form-card {
+      padding: 1.75rem;
+    }
+
+    @media (min-width: 640px) {
+      .form-card {
+        padding: 2.25rem;
+      }
+    }
+
+    .form-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    @media (min-width: 640px) {
+      .form-grid-2 {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-label {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-silver);
+      margin-bottom: 0.4rem;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.82rem 0.95rem;
+      border-radius: 10px;
+      background: var(--bg-black);
+      border: 1px solid var(--border-steel);
+      color: var(--text-white);
+      font-size: 0.92rem;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--brand-red);
+      box-shadow: 0 0 0 3px rgba(255, 30, 0, 0.16);
+    }
+
+    .form-control::placeholder {
+      color: rgba(142, 149, 162, 0.55);
+    }
+
+    .success-panel {
+      display: none;
+      padding: 1.75rem;
+      border-radius: var(--radius-md);
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.42);
+      text-align: center;
+    }
+
+    .success-panel.is-visible {
+      display: block;
+    }
+
+    /* =========================================================
+       SEÇÃO 12: RODAPÉ
+    ========================================================== */
+    .site-footer {
+      background: var(--bg-graphite);
+      border-top: 1px solid var(--border-steel);
+      padding: 4rem 0 2.5rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      padding-bottom: 2.75rem;
+      border-bottom: 1px solid var(--border-steel);
+    }
+
+    @media (min-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1.3fr 1fr 0.9fr;
+      }
+    }
+
+    .footer-heading {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-white);
+      margin-bottom: 1rem;
+    }
+
+    .footer-services {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+      font-size: 0.88rem;
+      color: var(--text-silver);
+    }
+
+    @media (min-width: 480px) {
+      .footer-services {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .footer-services a:hover {
+      color: var(--text-white);
+    }
+
+    .footer-contact li {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 0.9rem;
+      color: var(--text-silver);
+      margin-bottom: 0.7rem;
+    }
+
+    .footer-contact a:hover {
+      color: var(--text-white);
+    }
+
+    .footer-bottom {
+      padding-top: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    @media (min-width: 640px) {
+      .footer-bottom {
+        flex-direction: row;
+      }
+    }
+
+    /* =========================================================
+       MODAL DE DIAGNÓSTICO
+    ========================================================== */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      background: rgba(0, 0, 0, 0.82);
+      backdrop-filter: blur(6px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .modal-backdrop.is-open {
+      display: flex;
+    }
+
+    .modal-dialog {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      max-height: 92vh;
+      overflow-y: auto;
+      padding: 1.75rem;
+    }
+
+    @media (min-width: 640px) {
+      .modal-dialog {
+        padding: 2.25rem;
+      }
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: var(--bg-black);
+      border: 1px solid var(--border-steel);
+      color: var(--text-silver);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .modal-close:hover {
+      color: var(--text-white);
+      border-color: var(--brand-red);
+    }
+
+    /* Animação Reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- =========================================================
+       HEADER / NAVEGAÇÃO FIXA
+  ========================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Logotipo Oficial PROVEXIS PCM -->
+      <a href="#topo" class="brand-logo" aria-label="PROVEXIS PCM - Início">
+        <svg class="brand-svg" viewBox="0 0 100 112" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Símbolo PROVEXIS">
+          <path d="M50 4L10 27V85L24 93V58L50 73L86 52V25L50 4ZM50 56L24 41V34L50 19L71 31V44L50 56Z" fill="#FF1E00"/>
+          <path d="M90 61L54 82L34 70L24 76V93L50 108L90 85V61ZM76 77L50 92L38 85L54 76L76 63V77Z" fill="#FF1E00"/>
+        </svg>
+        <div class="brand-text-wrap">
+          <div class="brand-title-row">
+            <span class="brand-name">PROVEXIS</span>
+            <span class="brand-tag">PCM</span>
+          </div>
+          <span class="brand-slogan">PERFORMANCE QUE SE PROVA</span>
+        </div>
+      </a>
+
+      <!-- Menu Desktop -->
+      <nav class="desktop-nav" aria-label="Navegação Principal">
+        <a href="#solucao">Solução</a>
+        <a href="#metodologia">Metodologia</a>
+        <a href="#plataforma">Plataforma</a>
+        <a href="#indicadores">Indicadores</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#segmentos">Segmentos</a>
+        <a href="#sobre">Sobre</a>
+      </nav>
+
+      <!-- CTA Header -->
+      <div class="header-actions">
+        <button type="button" class="btn btn-primary btn-sm" onclick="openModal('Header - Solicitar Diagnóstico')">
+          <span>Solicitar Diagnóstico</span>
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+        </button>
+      </div>
+
+      <!-- Botão Mobile -->
+      <button type="button" id="mobile-menu-toggle" class="mobile-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <svg id="burger-icon" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg id="close-icon" style="display:none" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <!-- Drawer Mobile -->
+    <div id="mobile-drawer" class="mobile-drawer">
+      <a href="#solucao" class="mobile-link">Solução</a>
+      <a href="#metodologia" class="mobile-link">Metodologia</a>
+      <a href="#plataforma" class="mobile-link">Plataforma</a>
+      <a href="#indicadores" class="mobile-link">Indicadores</a>
+      <a href="#diferenciais" class="mobile-link">Diferenciais</a>
+      <a href="#segmentos" class="mobile-link">Segmentos</a>
+      <a href="#sobre" class="mobile-link">Sobre</a>
+      <div style="margin-top:0.9rem;padding-top:0.9rem;border-top:1px solid var(--border-steel)">
+        <button type="button" class="btn btn-primary btn-full" onclick="openModal('Menu Mobile - Solicitar Diagnóstico')">
+          Solicitar Diagnóstico
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="topo">
+
+    <!-- =========================================================
+         1. SEÇÃO HERO
+    ========================================================== -->
+    <section class="hero-section section-dark bg-grid">
+      <div class="hero-glow-left"></div>
+      <div class="hero-glow-right"></div>
+
+      <div class="container hero-grid">
+        <!-- Coluna Esquerda -->
+        <div>
+          <div class="positioning-pill">
+            <span class="beacon-dot"></span>
+            <span>Consultoria</span>
+            <span style="color:var(--brand-red)">•</span>
+            <span>Engenharia da Manutenção</span>
+            <span style="color:var(--brand-red)">•</span>
+            <strong style="color:#fff">Plataforma Própria</strong>
+          </div>
+
+          <p class="hero-kicker">PROVEXIS PCM</p>
+          <h1 class="hero-title">Da manutenção reativa ao controle total.</h1>
+
+          <p class="hero-subtitle">
+            Implantamos Planejamento e Controle da Manutenção (PCM), estruturamos ativos, desenvolvemos planos preventivos e entregamos uma plataforma própria para transformar a manutenção em uma operação organizada, previsível e orientada por resultados.
+          </p>
+
+          <!-- Texto Destaque -->
+          <div class="hero-pillars">
+            <div class="pillar-box">
+              <div class="pillar-icon">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+              </div>
+              <span>Mais disponibilidade.</span>
+            </div>
+            <div class="pillar-box">
+              <div class="pillar-icon">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <span>Menos paradas.</span>
+            </div>
+            <div class="pillar-box">
+              <div class="pillar-icon">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+              </div>
+              <span>Mais controle.</span>
+            </div>
+          </div>
+
+          <!-- Botões -->
+          <div class="hero-cta-group">
+            <button type="button" class="btn btn-primary" onclick="openModal('Hero - Solicitar Diagnóstico')">
+              <span>Solicitar Diagnóstico</span>
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </button>
+            <a href="#solucao" class="btn btn-secondary">
+              <span>Conhecer a Solução</span>
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Coluna Direita: Painel de Telemetria Industrial -->
+        <div>
+          <div class="brushed-card telemetry-top telemetry-console">
+            <div class="console-header">
+              <div class="console-title">
+                <span class="status-green-dot"></span>
+                <span>PROVEXIS PCM // CONTROL CENTER</span>
+              </div>
+              <span class="console-tag">PLANTA-01 • PR</span>
+            </div>
+
+            <div class="console-kpi-grid">
+              <div class="console-kpi">
+                <div class="console-kpi-label">
+                  <span>DISPONIBILIDADE</span>
+                  <span style="color:var(--status-green)">+4.8%</span>
+                </div>
+                <div class="console-kpi-val">97.4%</div>
+                <div class="progress-track"><div class="progress-fill-green"></div></div>
+              </div>
+
+              <div class="console-kpi">
+                <div class="console-kpi-label">
+                  <span>PREVENTIVAS</span>
+                  <span style="color:var(--status-green)">EM DIA</span>
+                </div>
+                <div class="console-kpi-val">94.2%</div>
+                <div class="progress-track"><div class="progress-fill-red"></div></div>
+              </div>
+            </div>
+
+            <div class="console-tree">
+              <div class="console-tree-head">
+                <span>ÁRVORE DE ATIVOS ESTRUTURADA</span>
+                <span style="color:var(--brand-red);font-weight:700">CRITICIDADE ABC</span>
+              </div>
+              <div class="tree-row">
+                <span><strong style="color:var(--brand-red)">▸</strong> EXT-04 • Extrusora Principal</span>
+                <span style="color:var(--status-green)">OPERANDO</span>
+              </div>
+              <div class="tree-row">
+                <span><strong style="color:var(--brand-red)">▸</strong> CMP-02 • Compressor Parafuso</span>
+                <span style="color:var(--status-amber)">PMP 48H</span>
+              </div>
+              <div class="tree-row">
+                <span><strong style="color:var(--brand-red)">▸</strong> CNC-11 • Centro de Usinagem</span>
+                <span style="color:var(--status-green)">OPERANDO</span>
+              </div>
+            </div>
+
+            <div class="console-footer-metrics">
+              <div class="mini-metric">
+                <span>MTBF</span>
+                <strong>418h</strong>
+              </div>
+              <div class="mini-metric">
+                <span>MTTR</span>
+                <strong>1.4h</strong>
+              </div>
+              <div class="mini-metric">
+                <span>BACKLOG</span>
+                <strong style="color:var(--status-green)">6.5 dias</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         2. SEÇÃO PROBLEMAS
+    ========================================================== -->
+    <section id="problemas" class="section-graphite section-pad">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow-badge">DIAGNÓSTICO DE CENÁRIO INDUSTRIAL</span>
+          <h2 class="section-title">A manutenção está controlando a fábrica ou a fábrica está controlando a manutenção?</h2>
+          <p class="section-subtitle">
+            Muitas empresas ainda operam com informações espalhadas entre planilhas, anotações, grupos de mensagens e controles paralelos. <strong>O resultado é sempre o mesmo:</strong>
+          </p>
+        </div>
+
+        <div class="grid-cards-4 reveal">
+          <div class="brushed-card problem-card">
+            <div class="icon-box-red">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+            </div>
+            <div>
+              <span class="risk-tag">Risco 01</span>
+              <h3>Equipamentos sem histórico confiável</h3>
+            </div>
+          </div>
+
+          <div class="brushed-card problem-card">
+            <div class="icon-box-red">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div>
+              <span class="risk-tag">Risco 02</span>
+              <h3>Preventivas atrasadas</h3>
+            </div>
+          </div>
+
+          <div class="brushed-card problem-card">
+            <div class="icon-box-red">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div>
+              <span class="risk-tag">Risco 03</span>
+              <h3>Custos sem rastreabilidade</h3>
+            </div>
+          </div>
+
+          <div class="brushed-card problem-card">
+            <div class="icon-box-red">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            </div>
+            <div>
+              <span class="risk-tag">Risco 04</span>
+              <h3>Ordens de serviço sem padronização</h3>
+            </div>
+          </div>
+
+          <div class="brushed-card problem-card">
+            <div class="icon-box-red">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+            </div>
+            <div>
+              <span class="risk-tag">Risco 05</span>
+              <h3>Estoque técnico sem controle</h3>
+            </div>
+          </div>
+
+          <div class="brushed-card problem-card">
+            <div class="icon-box-red">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            </div>
+            <div>
+              <span class="risk-tag">Risco 06</span>
+              <h3>Indicadores inconsistentes</h3>
+            </div>
+          </div>
+
+          <div class="brushed-card problem-card problem-card-wide" style="border-color:rgba(255,30,0,0.35)">
+            <div class="icon-box-red">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/></svg>
+            </div>
+            <div>
+              <span class="risk-tag" style="color:var(--brand-red)">Risco Crítico 07</span>
+              <h3>Equipes atuando de forma reativa</h3>
+              <p>Paradas não programadas, horas extras recorrentes e perda de capacidade produtiva.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mensagem Final -->
+        <div class="alert-banner reveal">
+          <div class="alert-banner-left">
+            <div class="alert-icon-solid">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <p>Quando isso acontece, a manutenção deixa de ser estratégica e passa a trabalhar apagando incêndios.</p>
+          </div>
+          <button type="button" class="btn btn-secondary btn-sm" style="flex-shrink:0" onclick="openModal('Seção Problemas - Mudar Cenário')">
+            Estruturar minha operação →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         3. SEÇÃO SOLUÇÃO PROVEXIS
+    ========================================================== -->
+    <section id="solucao" class="section-dark bg-grid section-pad">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow-badge">ARQUITETURA INTEGRADA DE PCM</span>
+          <h2 class="section-title">A Solução PROVEXIS</h2>
+          <p class="section-subtitle">
+            A PROVEXIS une consultoria, engenharia de manutenção e tecnologia em uma única metodologia. <strong>Não entregamos apenas um sistema.</strong> Implantamos uma estrutura completa de gestão da manutenção.
+          </p>
+        </div>
+
+        <div class="grid-cards-3 reveal">
+          <!-- Card 1 -->
+          <div class="brushed-card telemetry-top solution-card">
+            <div class="solution-card-head">
+              <div class="solution-icon">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+              </div>
+              <span class="solution-num">01</span>
+            </div>
+            <h3>Diagnóstico da Operação</h3>
+            <p>Mapeamento da situação atual da manutenção.</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="brushed-card telemetry-top solution-card">
+            <div class="solution-card-head">
+              <div class="solution-icon">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+              </div>
+              <span class="solution-num">02</span>
+            </div>
+            <h3>Estruturação dos Ativos</h3>
+            <p>Organização da árvore de ativos e base técnica.</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="brushed-card telemetry-top solution-card">
+            <div class="solution-card-head">
+              <div class="solution-icon">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              </div>
+              <span class="solution-num">03</span>
+            </div>
+            <h3>Planos Preventivos</h3>
+            <p>Desenvolvimento de PMPs e programas de inspeção.</p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="brushed-card telemetry-top solution-card">
+            <div class="solution-card-head">
+              <div class="solution-icon">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+              </div>
+              <span class="solution-num">04</span>
+            </div>
+            <h3>Gestão de Estoque Técnico</h3>
+            <p>Controle de materiais e sobressalentes.</p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="brushed-card telemetry-top solution-card">
+            <div class="solution-card-head">
+              <div class="solution-icon">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              </div>
+              <span class="solution-num">05</span>
+            </div>
+            <h3>Governança da Manutenção</h3>
+            <p>Padronização de processos e responsabilidades.</p>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="brushed-card telemetry-top solution-card" style="border-color:rgba(255,30,0,0.45)">
+            <div class="solution-card-head">
+              <div class="solution-icon solution-icon-solid">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+              <span class="solution-num" style="color:var(--brand-red)">06</span>
+            </div>
+            <h3>Plataforma PROVEXIS PCM</h3>
+            <p>Toda a operação centralizada em um único ambiente digital.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         4. SEÇÃO METODOLOGIA (COMO FUNCIONA - TIMELINE VISUAL)
+    ========================================================== -->
+    <section id="metodologia" class="section-graphite section-pad">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow-badge">ROTEIRO DE IMPLANTAÇÃO ESTRUTURADA</span>
+          <h2 class="section-title">Como Funciona</h2>
+          <p class="section-subtitle">
+            Metodologia sequencial em 7 fases para transformar a manutenção industrial com governança, engenharia aplicada e tecnologia própria.
+          </p>
+        </div>
+
+        <div class="timeline-wrapper reveal">
+
+          <!-- Fase 0 -->
+          <div class="brushed-card timeline-item">
+            <span class="timeline-node"></span>
+            <div class="timeline-meta">
+              <span class="phase-badge">Fase 0</span>
+              <span class="phase-code">BASELINE & DIAGNÓSTICO</span>
+            </div>
+            <h3>Diagnóstico Executivo</h3>
+            <p class="deliverables-label">Entregáveis:</p>
+            <ul class="deliverables-list">
+              <li>Diagnóstico da maturidade da manutenção</li>
+              <li>Identificação de gargalos</li>
+              <li>Avaliação de riscos</li>
+              <li>Plano de ação recomendado</li>
+            </ul>
+          </div>
+
+          <!-- Fase 1 -->
+          <div class="brushed-card timeline-item">
+            <span class="timeline-node"></span>
+            <div class="timeline-meta">
+              <span class="phase-badge">Fase 1</span>
+              <span class="phase-code">TAXONOMIA DE ATIVOS</span>
+            </div>
+            <h3>Estruturação dos Ativos</h3>
+
+            <div class="hierarchy-box">
+              <span class="deliverables-label" style="margin-bottom:0">Hierarquia:</span>
+              <div class="hierarchy-flow">
+                <span class="hierarchy-node">Planta</span>
+                <span class="hierarchy-arrow">→</span>
+                <span class="hierarchy-node">Área</span>
+                <span class="hierarchy-arrow">→</span>
+                <span class="hierarchy-node">Setor</span>
+                <span class="hierarchy-arrow">→</span>
+                <span class="hierarchy-node">Equipamento</span>
+                <span class="hierarchy-arrow">→</span>
+                <span class="hierarchy-node hierarchy-node-active">Componente</span>
+              </div>
+            </div>
+
+            <p class="deliverables-label">Entregáveis:</p>
+            <ul class="deliverables-list">
+              <li>Inventário técnico</li>
+              <li>Tagueamento</li>
+              <li>Criticidade ABC</li>
+              <li>Fichas técnicas</li>
+            </ul>
+          </div>
+
+          <!-- Fase 2 -->
+          <div class="brushed-card timeline-item">
+            <span class="timeline-node"></span>
+            <div class="timeline-meta">
+              <span class="phase-badge">Fase 2</span>
+              <span class="phase-code">CONFIABILIDADE & PREVENTIVA</span>
+            </div>
+            <h3>Engenharia de Manutenção</h3>
+            <p class="deliverables-label">Entregáveis:</p>
+            <ul class="deliverables-list">
+              <li>PMPs</li>
+              <li>Checklists</li>
+              <li>LALV</li>
+              <li>Procedimentos operacionais</li>
+              <li>Rotinas de inspeção</li>
+            </ul>
+          </div>
+
+          <!-- Fase 3 -->
+          <div class="brushed-card timeline-item">
+            <span class="timeline-node"></span>
+            <div class="timeline-meta">
+              <span class="phase-badge">Fase 3</span>
+              <span class="phase-code">MRO & SOBRESSALENTES</span>
+            </div>
+            <h3>Estoque Técnico</h3>
+            <p class="deliverables-label">Entregáveis:</p>
+            <ul class="deliverables-list">
+              <li>Cadastro de materiais</li>
+              <li>Estoque mínimo e máximo</li>
+              <li>Classificação de criticidade</li>
+              <li>Integração com manutenção</li>
+            </ul>
+          </div>
+
+          <!-- Fase 4 -->
+          <div class="brushed-card timeline-item">
+            <span class="timeline-node"></span>
+            <div class="timeline-meta">
+              <span class="phase-badge">Fase 4</span>
+              <span class="phase-code">PROCESSOS & FLUXOS</span>
+            </div>
+            <h3>Governança da Manutenção</h3>
+            <p class="deliverables-label">Entregáveis:</p>
+            <ul class="deliverables-list">
+              <li>Fluxo de solicitações</li>
+              <li>Fluxo de ordens de serviço</li>
+              <li>Definição de responsabilidades</li>
+              <li>Padronização operacional</li>
+            </ul>
+          </div>
+
+          <!-- Fase 5 -->
+          <div class="brushed-card timeline-item" style="border-color:rgba(255,30,0,0.4)">
+            <span class="timeline-node"></span>
+            <div class="timeline-meta">
+              <span class="phase-badge phase-badge-solid">Fase 5</span>
+              <span class="phase-code">DEPLOY TECNOLÓGICO</span>
+            </div>
+            <h3>Implantação da Plataforma PROVEXIS PCM</h3>
+            <p class="section-subtitle" style="font-size:0.95rem">Configuração completa da solução.</p>
+          </div>
+
+          <!-- Fase 6 -->
+          <div class="brushed-card timeline-item">
+            <span class="timeline-node timeline-node-final"></span>
+            <div class="timeline-meta">
+              <span class="phase-badge phase-badge-green">Fase 6</span>
+              <span class="phase-code">ADOÇÃO & CULTURA</span>
+            </div>
+            <h3>Capacitação das Equipes</h3>
+            <p class="section-subtitle" style="font-size:0.95rem">Treinamento de gestores, técnicos e solicitantes.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         5. SEÇÃO PLATAFORMA PROVEXIS PCM
+    ========================================================== -->
+    <section id="plataforma" class="section-dark bg-grid section-pad">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow-badge">TECNOLOGIA PROPRIETÁRIA</span>
+          <h2 class="section-title">Plataforma PROVEXIS PCM</h2>
+          <p class="section-subtitle">Uma solução desenvolvida para a realidade da indústria.</p>
+        </div>
+
+        <!-- Showcase Interativo com Espaço Reservado para Prints Reais -->
+        <div class="brushed-card platform-showcase reveal">
+          <div class="platform-tabs-bar">
+            <div class="tabs-list" role="tablist">
+              <button type="button" class="tab-btn active" id="tab-dashboard" onclick="setPlatformTab('dashboard')">01. Dashboard Executivo</button>
+              <button type="button" class="tab-btn" id="tab-ativos" onclick="setPlatformTab('ativos')">02. Gestão de Ativos</button>
+              <button type="button" class="tab-btn" id="tab-os" onclick="setPlatformTab('os')">03. Ordens de Serviço</button>
+              <button type="button" class="tab-btn" id="tab-solicitante" onclick="setPlatformTab('solicitante')">04. Portal do Solicitante</button>
+            </div>
+            <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--text-muted)">
+              ● ÁREA RESERVADA PARA PRINTS REAIS DO SISTEMA
+            </span>
+          </div>
+
+          <div class="browser-frame">
+            <div class="browser-top">
+              <div class="browser-dots">
+                <span style="background:#FF1E00"></span>
+                <span style="background:#F59E0B"></span>
+                <span style="background:#10B981"></span>
+              </div>
+              <div class="browser-url">app.provexis.com.br/pcm</div>
+              <span style="font-family:var(--font-mono);font-size:0.68rem;color:var(--status-green)">ONLINE</span>
+            </div>
+
+            <div class="browser-body" id="platform-tab-panel">
+              <!-- Preenchido dinamicamente pelo JS -->
+            </div>
+          </div>
+        </div>
+
+        <!-- 7 Cards da Plataforma -->
+        <div class="grid-cards-4 reveal">
+          <div class="brushed-card module-card">
+            <span class="module-code">MÓDULO 01</span>
+            <h3>Gestão de Ativos</h3>
+            <p>Controle completo dos equipamentos.</p>
+          </div>
+
+          <div class="brushed-card module-card">
+            <span class="module-code">MÓDULO 02</span>
+            <h3>Ordens de Serviço</h3>
+            <p>Abertura, planejamento, execução e encerramento.</p>
+          </div>
+
+          <div class="brushed-card module-card">
+            <span class="module-code">MÓDULO 03</span>
+            <h3>Portal do Solicitante</h3>
+            <p>Chamados rápidos e organizados.</p>
+          </div>
+
+          <div class="brushed-card module-card">
+            <span class="module-code">MÓDULO 04</span>
+            <h3>Planejamento PCM</h3>
+            <p>Controle das preventivas e programação.</p>
+          </div>
+
+          <div class="brushed-card module-card">
+            <span class="module-code">MÓDULO 05</span>
+            <h3>Estoque Técnico</h3>
+            <p>Gestão de peças e materiais.</p>
+          </div>
+
+          <div class="brushed-card module-card">
+            <span class="module-code">MÓDULO 06</span>
+            <h3>Gestão Multi Planta</h3>
+            <p>Controle centralizado de múltiplas unidades.</p>
+          </div>
+
+          <div class="brushed-card module-card problem-card-wide" style="border-color:rgba(255,30,0,0.4)">
+            <span class="module-code">MÓDULO 07 • VISÃO GERENCIAL</span>
+            <h3>Dashboard Executivo</h3>
+            <p>Indicadores em tempo real.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         6. SEÇÃO INDICADORES
+    ========================================================== -->
+    <section id="indicadores" class="section-graphite section-pad">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow-badge">KPIs & CONFIABILIDADE INDUSTRIAL</span>
+          <h2 class="section-title">Indicadores que Geram Decisão</h2>
+          <p class="section-subtitle">Transforme dados operacionais em ações práticas.</p>
+        </div>
+
+        <div class="grid-cards-4 reveal">
+          <div class="brushed-card telemetry-top kpi-card">
+            <div class="kpi-card-top">
+              <span class="kpi-badge">KPI 01</span>
+              <span class="kpi-category">CONFIABILIDADE</span>
+            </div>
+            <h3>MTBF</h3>
+            <p>Tempo médio entre falhas.</p>
+          </div>
+
+          <div class="brushed-card telemetry-top kpi-card">
+            <div class="kpi-card-top">
+              <span class="kpi-badge">KPI 02</span>
+              <span class="kpi-category">MANUTENIBILIDADE</span>
+            </div>
+            <h3>MTTR</h3>
+            <p>Tempo médio para reparo.</p>
+          </div>
+
+          <div class="brushed-card telemetry-top kpi-card">
+            <div class="kpi-card-top">
+              <span class="kpi-badge">KPI 03</span>
+              <span class="kpi-category">DISPONIBILIDADE</span>
+            </div>
+            <h3>Disponibilidade Física</h3>
+            <p>Performance operacional dos ativos.</p>
+          </div>
+
+          <div class="brushed-card telemetry-top kpi-card">
+            <div class="kpi-card-top">
+              <span class="kpi-badge">KPI 04</span>
+              <span class="kpi-category" style="color:var(--status-amber)">PLANEJAMENTO</span>
+            </div>
+            <h3>Backlog de Manutenção</h3>
+            <p>Controle da carga pendente.</p>
+          </div>
+
+          <div class="brushed-card telemetry-top kpi-card">
+            <div class="kpi-card-top">
+              <span class="kpi-badge">KPI 05</span>
+              <span class="kpi-category" style="color:var(--text-silver)">FINANCEIRO</span>
+            </div>
+            <h3>Custos de Manutenção</h3>
+            <p>Monitoramento financeiro da manutenção.</p>
+          </div>
+
+          <div class="brushed-card telemetry-top kpi-card">
+            <div class="kpi-card-top">
+              <span class="kpi-badge">KPI 06</span>
+              <span class="kpi-category">ADERÊNCIA</span>
+            </div>
+            <h3>Cumprimento das Preventivas</h3>
+            <p>Controle da execução dos planos.</p>
+          </div>
+
+          <div class="brushed-card telemetry-top kpi-card">
+            <div class="kpi-card-top">
+              <span class="kpi-badge">KPI 07</span>
+              <span class="kpi-category">ATENDIMENTO</span>
+            </div>
+            <h3>SLA de Atendimento</h3>
+            <p>Tempo de resposta da equipe.</p>
+          </div>
+
+          <div class="brushed-card telemetry-top kpi-card">
+            <div class="kpi-card-top">
+              <span class="kpi-badge">KPI 08</span>
+              <span class="kpi-category" style="color:var(--text-silver)">RASTREABILIDADE</span>
+            </div>
+            <h3>Histórico dos Ativos</h3>
+            <p>Rastreabilidade completa das intervenções.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         7. SEÇÃO DIFERENCIAIS
+    ========================================================== -->
+    <section id="diferenciais" class="section-dark bg-grid section-pad">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow-badge">VANTAGEM COMPETITIVA</span>
+          <h2 class="section-title">Por que escolher a PROVEXIS?</h2>
+        </div>
+
+        <div class="grid-cards-3 reveal">
+          <div class="brushed-card solution-card">
+            <div class="solution-icon" style="margin-bottom:1.1rem">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/></svg>
+            </div>
+            <h3>Consultoria + Engenharia + Tecnologia</h3>
+            <p>Unimos metodologia, experiência prática e plataforma própria.</p>
+          </div>
+
+          <div class="brushed-card solution-card">
+            <div class="solution-icon" style="margin-bottom:1.1rem">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/></svg>
+            </div>
+            <h3>Plataforma Própria</h3>
+            <p>Sem dependência de fornecedores externos.</p>
+          </div>
+
+          <div class="brushed-card solution-card">
+            <div class="solution-icon" style="margin-bottom:1.1rem">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <h3>Engenharia Reversa</h3>
+            <p>Desenvolvimento e reconstrução de componentes quando necessário.</p>
+          </div>
+
+          <div class="brushed-card solution-card">
+            <div class="solution-icon" style="margin-bottom:1.1rem">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+            </div>
+            <h3>Portal do Solicitante</h3>
+            <p>Comunicação direta entre operação e manutenção.</p>
+          </div>
+
+          <div class="brushed-card solution-card">
+            <div class="solution-icon" style="margin-bottom:1.1rem">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <h3>Indicadores em Tempo Real</h3>
+            <p>Decisões baseadas em dados.</p>
+          </div>
+
+          <div class="brushed-card solution-card" style="border-color:rgba(255,30,0,0.45)">
+            <div class="solution-icon solution-icon-solid" style="margin-bottom:1.1rem">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3>Foco em Resultado</h3>
+            <p>Aumento da disponibilidade e redução de perdas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         8. SEÇÃO SEGMENTOS
+    ========================================================== -->
+    <section id="segmentos" class="section-graphite section-pad">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow-badge">SETORES ATENDIDOS</span>
+          <h2 class="section-title">Para Quem é a PROVEXIS</h2>
+          <p class="section-subtitle">Atendemos empresas que desejam profissionalizar a gestão da manutenção.</p>
+        </div>
+
+        <div class="grid-cards-4 reveal">
+          <div class="brushed-card segment-pill">
+            <span class="segment-dot"></span>
+            <span>Indústrias Plásticas</span>
+          </div>
+          <div class="brushed-card segment-pill">
+            <span class="segment-dot"></span>
+            <span>Metalúrgicas</span>
+          </div>
+          <div class="brushed-card segment-pill">
+            <span class="segment-dot"></span>
+            <span>Alimentícias</span>
+          </div>
+          <div class="brushed-card segment-pill">
+            <span class="segment-dot"></span>
+            <span>Automotivas</span>
+          </div>
+          <div class="brushed-card segment-pill">
+            <span class="segment-dot"></span>
+            <span>Logística</span>
+          </div>
+          <div class="brushed-card segment-pill">
+            <span class="segment-dot"></span>
+            <span>Facilities</span>
+          </div>
+          <div class="brushed-card segment-pill problem-card-wide" style="border-color:rgba(255,30,0,0.4)">
+            <span class="beacon-dot"></span>
+            <span>Empresas com ativos industriais críticos</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         9. SEÇÃO ENTREGÁVEIS
+    ========================================================== -->
+    <section id="entregaveis" class="section-dark bg-grid section-pad">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow-badge">ESCOPO DE ENTREGA</span>
+          <h2 class="section-title">O que sua empresa recebe ao final do projeto</h2>
+        </div>
+
+        <div class="grid-cards-3 reveal">
+          <div class="brushed-card deliverable-item">
+            <div class="check-badge"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+            <span>Plataforma PROVEXIS PCM configurada</span>
+          </div>
+
+          <div class="brushed-card deliverable-item">
+            <div class="check-badge"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+            <span>Base de ativos estruturada</span>
+          </div>
+
+          <div class="brushed-card deliverable-item">
+            <div class="check-badge"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+            <span>Criticidade implementada</span>
+          </div>
+
+          <div class="brushed-card deliverable-item">
+            <div class="check-badge"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+            <span>Planos preventivos ativos</span>
+          </div>
+
+          <div class="brushed-card deliverable-item">
+            <div class="check-badge"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+            <span>Estoque técnico organizado</span>
+          </div>
+
+          <div class="brushed-card deliverable-item">
+            <div class="check-badge"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+            <span>Equipes treinadas</span>
+          </div>
+
+          <div class="brushed-card deliverable-item">
+            <div class="check-badge"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+            <span>Indicadores operacionais funcionando</span>
+          </div>
+
+          <div class="brushed-card deliverable-item">
+            <div class="check-badge"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+            <span>Processo de manutenção padronizado</span>
+          </div>
+
+          <div class="brushed-card deliverable-item">
+            <div class="check-badge"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+            <span>Governança consolidada</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         10. SEÇÃO SOBRE A PROVEXIS
+    ========================================================== -->
+    <section id="sobre" class="section-graphite section-pad">
+      <div class="container reveal">
+        <div class="brushed-card telemetry-top about-box">
+          <span class="eyebrow-badge">POSICIONAMENTO INSTITUCIONAL</span>
+          <h2 class="section-title">Sobre a PROVEXIS</h2>
+          <p class="section-subtitle" style="margin-bottom:1rem">
+            A PROVEXIS nasceu da necessidade de transformar a manutenção em uma área estratégica.
+          </p>
+          <p style="font-family:var(--font-mono);font-size:0.78rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted)">
+            Nossa proposta é simples:
+          </p>
+
+          <blockquote class="about-quote">
+            "Estruturar processos, organizar informações e criar uma cultura de gestão baseada em dados."
+          </blockquote>
+
+          <p class="section-subtitle">
+            Mais do que implantar um sistema, implantamos uma forma diferente de gerir a manutenção.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         11. CTA FINAL + FORMULÁRIO DE DIAGNÓSTICO
+    ========================================================== -->
+    <section id="diagnostico" class="section-dark bg-grid section-pad">
+      <div class="container cta-grid">
+        <!-- Coluna Esquerda -->
+        <div class="reveal">
+          <span class="eyebrow-badge">PRÓXIMO PASSO • DIAGNÓSTICO EXECUTIVO</span>
+          <h2 class="section-title">Sua manutenção pode ser mais organizada, previsível e eficiente.</h2>
+          <p class="section-subtitle" style="margin-bottom:1.85rem">
+            Solicite um diagnóstico e descubra como a PROVEXIS pode transformar a gestão da manutenção da sua empresa.
+          </p>
+
+          <button type="button" class="btn btn-primary" onclick="openModal('CTA Final - Botão Solicitar Diagnóstico')">
+            <span>Solicitar Diagnóstico</span>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </button>
+
+          <div class="cta-trust-grid">
+            <div>
+              <strong style="display:block;font-family:var(--font-mono);font-size:0.78rem;color:#fff">ENGENHARIA APLICADA</strong>
+              <span style="font-size:0.84rem;color:var(--text-silver)">Especialistas em PCM e confiabilidade</span>
+            </div>
+            <div>
+              <strong style="display:block;font-family:var(--font-mono);font-size:0.78rem;color:#fff">PLATAFORMA PRÓPRIA</strong>
+              <span style="font-size:0.84rem;color:var(--text-silver)">Implantação completa ponta a ponta</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coluna Direita: Formulário de Conversão -->
+        <div class="reveal">
+          <div class="brushed-card telemetry-top form-card">
+            <h3 style="font-size:1.4rem;font-weight:800;margin-bottom:0.35rem">Solicitar Diagnóstico Técnico</h3>
+            <p style="font-size:0.88rem;color:var(--text-silver);margin-bottom:1.5rem">
+              Preencha os dados da sua planta para iniciar o diagnóstico de maturidade da manutenção.
+            </p>
+
+            <form id="inline-form" onsubmit="submitDiagnostico(event, 'inline')">
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label class="form-label" for="inline-nome">Nome Completo *</label>
+                  <input class="form-control" type="text" id="inline-nome" name="nome" required placeholder="Ex: Roberto Silva" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="inline-cargo">Cargo *</label>
+                  <select class="form-control" id="inline-cargo" name="cargo" required>
+                    <option value="">Selecione seu cargo</option>
+                    <option value="Gerente de Manutenção">Gerente de Manutenção</option>
+                    <option value="Supervisor de Manutenção">Supervisor de Manutenção</option>
+                    <option value="Coordenador PCM">Coordenador PCM</option>
+                    <option value="Gerente Industrial">Gerente Industrial</option>
+                    <option value="Diretor Industrial">Diretor Industrial</option>
+                    <option value="Outro">Outro</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label class="form-label" for="inline-empresa">Empresa *</label>
+                  <input class="form-control" type="text" id="inline-empresa" name="empresa" required placeholder="Nome da indústria" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="inline-segmento">Segmento *</label>
+                  <select class="form-control" id="inline-segmento" name="segmento" required>
+                    <option value="">Selecione o segmento</option>
+                    <option value="Indústria Plástica">Indústria Plástica</option>
+                    <option value="Metalúrgica">Metalúrgica</option>
+                    <option value="Alimentícia">Alimentícia</option>
+                    <option value="Automotiva">Automotiva</option>
+                    <option value="Logística">Logística</option>
+                    <option value="Facilities">Facilities</option>
+                    <option value="Ativos Industriais Críticos">Ativos Industriais Críticos</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label class="form-label" for="inline-email">E-mail Corporativo *</label>
+                  <input class="form-control" type="email" id="inline-email" name="email" required placeholder="nome@empresa.com.br" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="inline-telefone">Telefone / WhatsApp *</label>
+                  <input class="form-control" type="tel" id="inline-telefone" name="telefone" required placeholder="(41) 99999-9999" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="inline-desafio">Principal Desafio / Escopo Desejado *</label>
+                <select class="form-control" id="inline-desafio" name="desafio" required>
+                  <option value="Implantação Completa de PCM + Plataforma PROVEXIS">Implantação Completa de PCM + Plataforma PROVEXIS</option>
+                  <option value="Estruturação de Ativos e Criticidade ABC">Estruturação de Ativos e Criticidade ABC</option>
+                  <option value="Engenharia da Manutenção e Planos Preventivos">Engenharia da Manutenção e Planos Preventivos</option>
+                  <option value="Gestão de Estoque Técnico">Gestão de Estoque Técnico</option>
+                  <option value="Governança da Manutenção e Indicadores">Governança da Manutenção e Indicadores</option>
+                  <option value="Plataforma PROVEXIS PCM">Plataforma PROVEXIS PCM</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full">Solicitar Diagnóstico</button>
+            </form>
+
+            <!-- Confirmação de Envio -->
+            <div id="inline-success" class="success-panel">
+              <div class="check-badge" style="margin:0 auto 0.85rem auto;width:44px;height:44px">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <h4 style="font-size:1.25rem;font-weight:800;margin-bottom:0.45rem">Solicitação de Diagnóstico Confirmada</h4>
+              <p id="inline-success-text" style="font-size:0.9rem;color:var(--text-silver);margin-bottom:1rem"></p>
+              <div style="display:flex;flex-wrap:wrap;gap:0.65rem;justify-content:center">
+                <a id="inline-mailto-link" href="mailto:contato@provexis.com.br" class="btn btn-secondary btn-sm">Enviar cópia por E-mail</a>
+                <button type="button" class="btn btn-sm" style="background:transparent;color:var(--brand-red)" onclick="resetDiagnosticoForm('inline')">Nova solicitação</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================
+       12. RODAPÉ
+  ========================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Marca -->
+        <div>
+          <a href="#topo" class="brand-logo" style="margin-bottom:1rem">
+            <svg class="brand-svg" viewBox="0 0 100 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M50 4L10 27V85L24 93V58L50 73L86 52V25L50 4ZM50 56L24 41V34L50 19L71 31V44L50 56Z" fill="#FF1E00"/>
+              <path d="M90 61L54 82L34 70L24 76V93L50 108L90 85V61ZM76 77L50 92L38 85L54 76L76 63V77Z" fill="#FF1E00"/>
+            </svg>
+            <div class="brand-text-wrap">
+              <span class="brand-name">PROVEXIS PCM</span>
+              <span class="brand-slogan">Performance que se prova.</span>
+            </div>
+          </a>
+          <p style="font-size:0.88rem;color:var(--text-silver);max-width:390px;line-height:1.65">
+            Consultoria, Engenharia da Manutenção e Implantação de PCM com Plataforma Própria.
+          </p>
+        </div>
+
+        <!-- Especialidades -->
+        <div>
+          <h4 class="footer-heading">Serviços & Soluções</h4>
+          <ul class="footer-services">
+            <li><a href="#solucao">Implantação de PCM</a></li>
+            <li><a href="#metodologia">Estruturação de Ativos</a></li>
+            <li><a href="#metodologia">Engenharia da Manutenção</a></li>
+            <li><a href="#solucao">Planos Preventivos</a></li>
+            <li><a href="#solucao">Gestão de Estoque Técnico</a></li>
+            <li><a href="#solucao">Governança da Manutenção</a></li>
+            <li><a href="#indicadores">Indicadores de Performance</a></li>
+            <li><a href="#metodologia">Treinamentos Operacionais</a></li>
+            <li><a href="#plataforma" style="color:var(--brand-red);font-weight:600">Plataforma PROVEXIS PCM</a></li>
+          </ul>
+        </div>
+
+        <!-- Contato -->
+        <div>
+          <h4 class="footer-heading">Contato</h4>
+          <ul class="footer-contact">
+            <li>
+              <svg width="16" height="16" fill="none" stroke="#FF1E00" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span>São José dos Pinhais - PR</span>
+            </li>
+            <li>
+              <svg width="16" height="16" fill="none" stroke="#FF1E00" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <a href="mailto:contato@provexis.com.br">contato@provexis.com.br</a>
+            </li>
+            <li>
+              <svg width="16" height="16" fill="none" stroke="#FF1E00" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+              <a href="https://www.provexis.com.br" target="_blank" rel="noopener noreferrer">www.provexis.com.br</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year-now"></span> PROVEXIS PCM. Todos os direitos reservados.</span>
+        <span style="font-family:var(--font-mono)">Performance que se prova.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       MODAL INTERATIVO DE DIAGNÓSTICO
+  ========================================================== -->
+  <div id="diagnostico-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-heading">
+    <div class="brushed-card telemetry-top modal-dialog">
+      <button type="button" class="modal-close" onclick="closeModal()" aria-label="Fechar">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <span style="font-family:var(--font-mono);font-size:0.7rem;font-weight:700;color:var(--brand-red);letter-spacing:0.1em">DIAGNÓSTICO EXECUTIVO PROVEXIS PCM</span>
+      <h3 id="modal-heading" style="font-size:1.55rem;font-weight:800;margin:0.35rem 0">Solicitar Diagnóstico</h3>
+      <p style="font-size:0.88rem;color:var(--text-silver);margin-bottom:1.35rem">
+        Informe os dados abaixo para receber uma avaliação técnica da maturidade da sua manutenção.
+      </p>
+
+      <form id="modal-form" onsubmit="submitDiagnostico(event, 'modal')">
+        <input type="hidden" id="modal-origem" name="origem" value="Modal" />
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label class="form-label" for="modal-nome">Nome Completo *</label>
+            <input class="form-control" type="text" id="modal-nome" name="nome" required placeholder="Seu nome" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="modal-cargo">Cargo *</label>
+            <select class="form-control" id="modal-cargo" name="cargo" required>
+              <option value="">Selecione</option>
+              <option value="Gerente de Manutenção">Gerente de Manutenção</option>
+              <option value="Supervisor de Manutenção">Supervisor de Manutenção</option>
+              <option value="Coordenador PCM">Coordenador PCM</option>
+              <option value="Gerente Industrial">Gerente Industrial</option>
+              <option value="Diretor Industrial">Diretor Industrial</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label class="form-label" for="modal-empresa">Empresa *</label>
+            <input class="form-control" type="text" id="modal-empresa" name="empresa" required placeholder="Nome da empresa" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="modal-segmento">Segmento *</label>
+            <select class="form-control" id="modal-segmento" name="segmento" required>
+              <option value="">Selecione</option>
+              <option value="Indústria Plástica">Indústria Plástica</option>
+              <option value="Metalúrgica">Metalúrgica</option>
+              <option value="Alimentícia">Alimentícia</option>
+              <option value="Automotiva">Automotiva</option>
+              <option value="Logística">Logística</option>
+              <option value="Facilities">Facilities</option>
+              <option value="Ativos Industriais Críticos">Ativos Industriais Críticos</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label class="form-label" for="modal-email">E-mail Corporativo *</label>
+            <input class="form-control" type="email" id="modal-email" name="email" required placeholder="nome@empresa.com.br" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="modal-telefone">Telefone / WhatsApp *</label>
+            <input class="form-control" type="tel" id="modal-telefone" name="telefone" required placeholder="(41) 99999-9999" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="modal-desafio">Escopo Prioritário *</label>
+          <select class="form-control" id="modal-desafio" name="desafio" required>
+            <option value="Implantação Completa de PCM + Plataforma PROVEXIS">Implantação Completa de PCM + Plataforma PROVEXIS</option>
+            <option value="Estruturação de Ativos">Estruturação de Ativos</option>
+            <option value="Engenharia da Manutenção e Planos Preventivos">Engenharia da Manutenção e Planos Preventivos</option>
+            <option value="Gestão de Estoque Técnico">Gestão de Estoque Técnico</option>
+            <option value="Governança da Manutenção e Indicadores">Governança da Manutenção e Indicadores</option>
+            <option value="Plataforma PROVEXIS PCM">Plataforma PROVEXIS PCM</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full">Confirmar Solicitação de Diagnóstico</button>
+      </form>
+
+      <div id="modal-success" class="success-panel">
+        <div class="check-badge" style="margin:0 auto 0.85rem auto;width:44px;height:44px">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+        </div>
+        <h4 style="font-size:1.25rem;font-weight:800;margin-bottom:0.45rem">Diagnóstico Solicitado!</h4>
+        <p id="modal-success-text" style="font-size:0.9rem;color:var(--text-silver);margin-bottom:1rem"></p>
+        <div style="display:flex;flex-wrap:wrap;gap:0.65rem;justify-content:center">
+          <a id="modal-mailto-link" href="mailto:contato@provexis.com.br" class="btn btn-secondary btn-sm">Enviar cópia por E-mail</a>
+          <button type="button" class="btn btn-primary btn-sm" onclick="closeModal()">Concluir</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       JAVASCRIPT INTEGRADO (100% AUTOCONTIDO)
+  ========================================================== -->
+  <script>
+    // 1. Ano dinâmico no rodapé
+    document.getElementById('year-now').textContent = new Date().getFullYear();
+
+    // 2. Menu Mobile
+    const mobileToggle = document.getElementById('mobile-menu-toggle');
+    const mobileDrawer = document.getElementById('mobile-drawer');
+    const burgerIcon = document.getElementById('burger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    function setMobileMenu(open) {
+      if (open) {
+        mobileDrawer.classList.add('is-open');
+        burgerIcon.style.display = 'none';
+        closeIcon.style.display = 'block';
+        mobileToggle.setAttribute('aria-expanded', 'true');
+      } else {
+        mobileDrawer.classList.remove('is-open');
+        burgerIcon.style.display = 'block';
+        closeIcon.style.display = 'none';
+        mobileToggle.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    mobileToggle.addEventListener('click', function () {
+      const isOpen = mobileDrawer.classList.contains('is-open');
+      setMobileMenu(!isOpen);
+    });
+
+    document.querySelectorAll('.mobile-link').forEach(function (link) {
+      link.addEventListener('click', function () {
+        setMobileMenu(false);
+      });
+    });
+
+    // 3. Abas da Plataforma PROVEXIS PCM + Espaço Reservado para Prints Reais
+    const platformTabs = {
+      dashboard: {
+        tag: 'DASHBOARD EXECUTIVO // REAL-TIME',
+        title: 'Indicadores em Tempo Real e Gestão Multi Planta',
+        desc: 'Acompanhe MTBF, MTTR, disponibilidade física, backlog, custos de manutenção e cumprimento das preventivas em tempo real.',
+        slotText: 'ESPAÇO RESERVADO PARA PRINT REAL DO SISTEMA: Substitua este bloco pela captura de tela oficial do Dashboard Executivo da Plataforma PROVEXIS PCM.',
+        screenHtml: `
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0.65rem;font-family:var(--font-mono);margin-bottom:0.9rem">
+            <div style="background:var(--bg-black);border:1px solid var(--border-steel);padding:0.75rem;border-radius:8px">
+              <span style="display:block;font-size:0.62rem;color:var(--text-muted)">O.S. ATIVAS</span>
+              <strong style="font-size:1.25rem;color:#fff">24</strong>
+            </div>
+            <div style="background:var(--bg-black);border:1px solid var(--border-steel);padding:0.75rem;border-radius:8px">
+              <span style="display:block;font-size:0.62rem;color:var(--text-muted)">PMP CUMPRIDO</span>
+              <strong style="font-size:1.25rem;color:var(--status-green)">96%</strong>
+            </div>
+            <div style="background:var(--bg-black);border:1px solid var(--border-steel);padding:0.75rem;border-radius:8px">
+              <span style="display:block;font-size:0.62rem;color:var(--text-muted)">CUSTO MRO</span>
+              <strong style="font-size:1.25rem;color:#fff">-18%</strong>
+            </div>
+          </div>
+          <div style="background:var(--bg-black);border:1px solid var(--border-steel);padding:0.9rem;border-radius:8px">
+            <div style="display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:0.66rem;color:var(--text-silver);margin-bottom:0.4rem">
+              <span>EVOLUÇÃO CUMPRIMENTO PREVENTIVAS</span>
+              <span style="color:var(--brand-red)">META ≥ 90%</span>
+            </div>
+            <div class="bar-chart">
+              <div class="bar-col"><div class="bar-fill" style="height:45%;opacity:0.45"></div><span style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted)">M1</span></div>
+              <div class="bar-col"><div class="bar-fill" style="height:58%;opacity:0.6"></div><span style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted)">M2</span></div>
+              <div class="bar-col"><div class="bar-fill" style="height:70%;opacity:0.75"></div><span style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted)">M3</span></div>
+              <div class="bar-col"><div class="bar-fill" style="height:80%;opacity:0.88"></div><span style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted)">M4</span></div>
+              <div class="bar-col"><div class="bar-fill" style="height:90%"></div><span style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted)">M5</span></div>
+              <div class="bar-col"><div class="bar-fill" style="height:98%;background:var(--status-green)"></div><span style="font-family:var(--font-mono);font-size:0.62rem;color:#fff">M6</span></div>
+            </div>
+          </div>
+        `
+      },
+      ativos: {
+        tag: 'GESTÃO DE ATIVOS // ÁRVORE & CRITICIDADE',
+        title: 'Controle Completo dos Equipamentos e Componentes',
+        desc: 'Hierarquia estruturada (Planta → Área → Setor → Equipamento → Componente), tagueamento técnico, criticidade ABC e histórico auditável.',
+        slotText: 'ESPAÇO RESERVADO PARA PRINT REAL DO SISTEMA: Substitua este bloco pela captura de tela da Árvore de Ativos e Ficha Técnica PROVEXIS PCM.',
+        screenHtml: `
+          <div style="display:flex;flex-direction:column;gap:0.55rem;font-family:var(--font-mono);font-size:0.74rem">
+            <div style="padding:0.7rem 0.85rem;background:var(--bg-black);border:1px solid var(--border-steel);border-radius:8px;display:flex;justify-content:space-between">
+              <span style="color:#fff">PLANTA-SJP // UNIDADE INDUSTRIAL 01</span>
+              <span style="color:var(--status-green)">142 ATIVOS</span>
+            </div>
+            <div style="margin-left:0.9rem;padding:0.7rem 0.85rem;background:var(--bg-black);border:1px solid var(--border-steel);border-radius:8px;display:flex;justify-content:space-between">
+              <span style="color:var(--text-silver)">↳ ÁREA: EXTRUSÃO & INJEÇÃO</span>
+              <span style="color:var(--brand-red)">CRITICIDADE A</span>
+            </div>
+            <div style="margin-left:1.8rem;padding:0.7rem 0.85rem;background:var(--bg-black);border:1px solid rgba(255,30,0,0.45);border-radius:8px;display:flex;justify-content:space-between">
+              <span style="color:#fff;font-weight:700">↳ TAG: EXT-004 • Extrusora Dupla Rosca</span>
+              <span style="color:var(--status-green)">PMP + LALV</span>
+            </div>
+          </div>
+        `
+      },
+      os: {
+        tag: 'ORDENS DE SERVIÇO // PADRONIZAÇÃO',
+        title: 'Abertura, Planejamento, Execução e Encerramento',
+        desc: 'Fluxo completo de ordens de serviço preventivas e corretivas com checklists técnicos, apontamento de horas e baixa de sobressalentes.',
+        slotText: 'ESPAÇO RESERVADO PARA PRINT REAL DO SISTEMA: Substitua este bloco pela captura de tela da Gestão de Ordens de Serviço PROVEXIS PCM.',
+        screenHtml: `
+          <div style="display:flex;flex-direction:column;gap:0.55rem;font-family:var(--font-mono);font-size:0.74rem">
+            <div style="padding:0.75rem;background:var(--bg-black);border:1px solid var(--border-steel);border-radius:8px;display:flex;justify-content:space-between;align-items:center">
+              <span><strong style="color:var(--brand-red)">#OS-2048</strong> Preventiva Mensal — Prensa PR-02</span>
+              <span style="color:var(--status-green)">CONCLUÍDA</span>
+            </div>
+            <div style="padding:0.75rem;background:var(--bg-black);border:1px solid var(--border-steel);border-radius:8px;display:flex;justify-content:space-between;align-items:center">
+              <span><strong style="color:var(--status-amber)">#OS-2049</strong> Inspeção Elétrica — Quadro QGBT-01</span>
+              <span style="color:var(--status-amber)">EXECUÇÃO</span>
+            </div>
+            <div style="padding:0.75rem;background:var(--bg-black);border:1px solid var(--border-steel);border-radius:8px;display:flex;justify-content:space-between;align-items:center">
+              <span><strong style="color:var(--text-silver)">#OS-2050</strong> Lubrificação LALV — Linha LT-05</span>
+              <span style="color:var(--text-silver)">PROGRAMADA</span>
+            </div>
+          </div>
+        `
+      },
+      solicitante: {
+        tag: 'PORTAL DO SOLICITANTE // OPERAÇÃO ↔ MANUTENÇÃO',
+        title: 'Chamados Rápidos e Organizados',
+        desc: 'Comunicação direta e rastreável entre produção e manutenção, com priorização por criticidade do ativo e monitoramento de SLA.',
+        slotText: 'ESPAÇO RESERVADO PARA PRINT REAL DO SISTEMA: Substitua este bloco pela captura de tela do Portal do Solicitante PROVEXIS PCM.',
+        screenHtml: `
+          <div style="background:var(--bg-black);border:1px solid var(--border-steel);border-radius:8px;padding:0.9rem;font-family:var(--font-mono);font-size:0.74rem">
+            <div style="display:flex;justify-content:space-between;padding-bottom:0.55rem;margin-bottom:0.65rem;border-bottom:1px solid var(--border-steel)">
+              <strong style="color:#fff">NOVA SOLICITAÇÃO DE SERVIÇO</strong>
+              <span style="color:var(--brand-red)">SLA ATIVO</span>
+            </div>
+            <div style="margin-bottom:0.55rem;color:var(--text-silver)">Ativo: <strong style="color:#fff">INJ-08 • Injetora 350T</strong></div>
+            <div style="margin-bottom:0.55rem;color:var(--text-silver)">Prioridade: <strong style="color:var(--status-amber)">ALTA • PARADA PARCIAL</strong></div>
+            <div style="color:var(--text-muted)">Ocorrência registrada com rastreabilidade completa para triagem PCM.</div>
+          </div>
+        `
+      }
+    };
+
+    function setPlatformTab(key) {
+      const data = platformTabs[key];
+      if (!data) return;
+
+      document.querySelectorAll('.tab-btn').forEach(function (btn) {
+        btn.classList.remove('active');
+      });
+      document.getElementById('tab-' + key).classList.add('active');
+
+      const panel = document.getElementById('platform-tab-panel');
+      panel.innerHTML = `
+        <div>
+          <span style="font-family:var(--font-mono);font-size:0.72rem;font-weight:700;color:var(--brand-red);display:block;margin-bottom:0.4rem">${data.tag}</span>
+          <h3 style="font-size:1.35rem;font-weight:800;color:#fff;margin-bottom:0.55rem">${data.title}</h3>
+          <p style="font-size:0.92rem;color:var(--text-silver);line-height:1.6">${data.desc}</p>
+          <div class="screenshot-slot">${data.slotText}</div>
+        </div>
+        <div class="screen-mockup-panel">
+          ${data.screenHtml}
+        </div>
+      `;
+    }
+
+    // Inicializa primeira aba
+    setPlatformTab('dashboard');
+
+    // 4. Modal de Solicitação de Diagnóstico
+    const modalEl = document.getElementById('diagnostico-modal');
+
+    function openModal(origem) {
+      document.getElementById('modal-origem').value = origem || 'Site PROVEXIS PCM';
+      modalEl.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+      setMobileMenu(false);
+    }
+
+    function closeModal() {
+      modalEl.classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+
+    modalEl.addEventListener('click', function (e) {
+      if (e.target === modalEl) closeModal();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && modalEl.classList.contains('is-open')) {
+        closeModal();
+      }
+    });
+
+    // 5. Submissão dos Formulários de Diagnóstico
+    function submitDiagnostico(event, prefix) {
+      event.preventDefault();
+      const form = document.getElementById(prefix + '-form');
+      const successPanel = document.getElementById(prefix + '-success');
+      const successText = document.getElementById(prefix + '-success-text');
+      const mailtoLink = document.getElementById(prefix + '-mailto-link');
+
+      const nome = form.querySelector('[name="nome"]').value.trim();
+      const cargo = form.querySelector('[name="cargo"]').value.trim();
+      const empresa = form.querySelector('[name="empresa"]').value.trim();
+      const segmento = form.querySelector('[name="segmento"]').value.trim();
+      const email = form.querySelector('[name="email"]').value.trim();
+      const telefone = form.querySelector('[name="telefone"]').value.trim();
+      const desafio = form.querySelector('[name="desafio"]').value.trim();
+
+      const protocolo = 'PVX-' + Math.floor(100000 + Math.random() * 900000);
+
+      successText.innerHTML =
+        'Olá, <strong style="color:#fff">' + nome + '</strong> (' + cargo + '). Recebemos a solicitação de diagnóstico para <strong style="color:#fff">' + empresa + '</strong>.<br/>' +
+        '<span style="display:inline-block;margin-top:0.5rem;font-family:var(--font-mono);font-size:0.76rem;color:var(--status-green)">Protocolo: ' + protocolo + ' • Nossa engenharia entrará em contato.</span>';
+
+      const subject = encodeURIComponent('Solicitação de Diagnóstico PCM — ' + empresa + ' [' + protocolo + ']');
+      const body = encodeURIComponent(
+        'Solicitação de Diagnóstico Executivo — PROVEXIS PCM\n\n' +
+        'Protocolo: ' + protocolo + '\n' +
+        'Nome: ' + nome + '\n' +
+        'Cargo: ' + cargo + '\n' +
+        'Empresa: ' + empresa + '\n' +
+        'Segmento: ' + segmento + '\n' +
+        'E-mail: ' + email + '\n' +
+        'Telefone/WhatsApp: ' + telefone + '\n' +
+        'Escopo Prioritário: ' + desafio + '\n'
+      );
+      mailtoLink.href = 'mailto:contato@provexis.com.br?subject=' + subject + '&body=' + body;
+
+      form.style.display = 'none';
+      successPanel.classList.add('is-visible');
+    }
+
+    function resetDiagnosticoForm(prefix) {
+      const form = document.getElementById(prefix + '-form');
+      const successPanel = document.getElementById(prefix + '-success');
+      form.reset();
+      successPanel.classList.remove('is-visible');
+      form.style.display = 'block';
+    }
+
+    // 6. Animação de Entrada (Scroll Reveal)
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(function (entries, obs) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+
+      document.querySelectorAll('.reveal').forEach(function (el) {
+        observer.observe(el);
+      });
+    } else {
+      document.querySelectorAll('.reveal').forEach(function (el) {
+        el.classList.add('visible');
+      });
+    }
+  </script>
+</body>
+</html>
