@@ -1,0 +1,1796 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PROVEXIS PCM | Consultoria, Engenharia da Manutenção e Plataforma Própria</title>
+  <meta name="description" content="Da manutenção reativa ao controle total. Implantamos Planejamento e Controle da Manutenção (PCM), estruturamos ativos, planos preventivos e plataforma própria para indústrias." />
+  <meta name="keywords" content="PROVEXIS PCM, Planejamento e Controle da Manutenção, Engenharia da Manutenção, Consultoria PCM, Software PCM, Gestão de Ativos, Planos Preventivos, MTBF, MTTR, São José dos Pinhais" />
+  <meta name="author" content="PROVEXIS PCM" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.provexis.com.br/" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="PROVEXIS PCM" />
+  <meta property="og:title" content="PROVEXIS PCM — Da manutenção reativa ao controle total." />
+  <meta property="og:description" content="Consultoria, Engenharia da Manutenção e Implantação de PCM com Plataforma Própria. Mais disponibilidade. Menos paradas. Mais controle." />
+  <meta property="og:url" content="https://www.provexis.com.br/" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Schema.org JSON-LD para SEO Industrial -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "PROVEXIS PCM",
+    "slogan": "Performance que se prova.",
+    "description": "Consultoria, Engenharia da Manutenção e Implantação de PCM com Plataforma Própria.",
+    "url": "https://www.provexis.com.br",
+    "email": "contato@provexis.com.br",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "São José dos Pinhais",
+      "addressRegion": "PR",
+      "addressCountry": "BR"
+    },
+    "areaServed": "BR",
+    "knowsAbout": [
+      "Implantação de PCM",
+      "Estruturação de Ativos",
+      "Engenharia da Manutenção",
+      "Planos Preventivos",
+      "Gestão de Estoque Técnico",
+      "Governança da Manutenção",
+      "Indicadores de Performance Industrial",
+      "Plataforma PROVEXIS PCM"
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts: Inter, Space Grotesk & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Space Grotesk', 'Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            provexis: {
+              black: '#07080A',
+              carbon: '#0D0F12',
+              graphite: '#14171D',
+              panel: '#1A1E26',
+              border: '#262B36',
+              steel: '#8E95A2',
+              silver: '#C8CED8',
+              red: '#FF1E1E',
+              redDark: '#D91414',
+              ember: '#FF4500',
+            }
+          },
+          boxShadow: {
+            'provexis-glow': '0 0 32px rgba(255, 30, 30, 0.25)',
+            'provexis-glow-strong': '0 0 45px rgba(255, 30, 30, 0.42)',
+            'industrial-card': '0 14px 35px -10px rgba(0, 0, 0, 0.75)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      color-scheme: dark;
+    }
+
+    body {
+      background-color: #07080A;
+      color: #F3F4F6;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Textura sutil de grade técnica industrial (CAD / Telemetry Blueprint) */
+    .bg-industrial-grid {
+      background-size: 44px 44px;
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    }
+
+    /* Superfície de aço escovado escuro */
+    .brushed-metal {
+      background: linear-gradient(145deg, #161A21 0%, #101318 55%, #171B23 100%);
+      border: 1px solid #262B36;
+    }
+
+    .brushed-metal:hover {
+      border-color: rgba(255, 30, 30, 0.48);
+    }
+
+    /* Linha de destaque superior estilo painel Siemens/Maximo */
+    .top-telemetry-bar {
+      position: relative;
+    }
+    .top-telemetry-bar::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #FF1E1E 0%, #FF4500 45%, transparent 100%);
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit;
+    }
+
+    /* Scrollbar customizada */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #07080A;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #262B36;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #FF1E1E;
+    }
+
+    /* Animações suaves de entrada */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Pulso de status operacional */
+    @keyframes pulseBeacon {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.45; transform: scale(1.25); }
+    }
+    .status-beacon {
+      animation: pulseBeacon 2.2s infinite ease-in-out;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-provexis-red selection:text-white">
+
+  <!-- =========================================================
+       0. HEADER / NAVEGAÇÃO FIXA
+  ========================================================== -->
+  <header id="main-header" class="fixed top-0 inset-x-0 z-50 transition-all duration-300 bg-provexis-black/85 backdrop-blur-md border-b border-provexis-border/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo Oficial PROVEXIS PCM em SVG -->
+        <a href="#topo" class="flex items-center gap-3.5 group focus:outline-none" aria-label="PROVEXIS PCM - Início">
+          <svg class="w-10 h-11 shrink-0 transition-transform duration-300 group-hover:scale-105" viewBox="0 0 100 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Hexágono Geométrico Vermelho PROVEXIS (P superior esquerdo + V/seta inferior direito) -->
+            <path d="M50 4L10 27V85L24 93V58L50 73L86 52V25L50 4ZM50 56L24 41V34L50 19L71 31V44L50 56Z" fill="#FF1E1E"/>
+            <path d="M90 61L54 82L34 70L24 76V93L50 108L90 85V61ZM76 77L50 92L38 85L54 76L76 63V77Z" fill="#FF1E1E"/>
+          </svg>
+          <div class="flex flex-col leading-none">
+            <div class="flex items-center gap-1.5">
+              <span class="font-display font-extrabold text-xl sm:text-2xl tracking-wider text-white">PROVEXIS</span>
+              <span class="font-mono text-[10px] font-bold px-1.5 py-0.5 rounded bg-provexis-red/15 text-provexis-red border border-provexis-red/40">PCM</span>
+            </div>
+            <span class="text-[9px] sm:text-[10px] font-medium tracking-[0.22em] text-provexis-silver uppercase mt-1">Performance que se prova</span>
+          </div>
+        </a>
+
+        <!-- Links de Navegação Desktop -->
+        <nav class="hidden lg:flex items-center gap-6 xl:gap-7" aria-label="Navegação Principal">
+          <a href="#solucao" class="nav-link text-sm font-medium text-provexis-silver hover:text-white transition-colors">Solução</a>
+          <a href="#metodologia" class="nav-link text-sm font-medium text-provexis-silver hover:text-white transition-colors">Metodologia</a>
+          <a href="#plataforma" class="nav-link text-sm font-medium text-provexis-silver hover:text-white transition-colors">Plataforma</a>
+          <a href="#indicadores" class="nav-link text-sm font-medium text-provexis-silver hover:text-white transition-colors">Indicadores</a>
+          <a href="#diferenciais" class="nav-link text-sm font-medium text-provexis-silver hover:text-white transition-colors">Diferenciais</a>
+          <a href="#segmentos" class="nav-link text-sm font-medium text-provexis-silver hover:text-white transition-colors">Segmentos</a>
+          <a href="#sobre" class="nav-link text-sm font-medium text-provexis-silver hover:text-white transition-colors">Sobre</a>
+        </nav>
+
+        <!-- Ações Header -->
+        <div class="hidden sm:flex items-center gap-3">
+          <button type="button" onclick="openDiagnosticoModal('Header - Solicitar Diagnóstico')" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-provexis-red to-provexis-ember hover:from-provexis-ember hover:to-provexis-red text-white font-semibold text-sm shadow-provexis-glow transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer">
+            <span>Solicitar Diagnóstico</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+          </button>
+        </div>
+
+        <!-- Botão Menu Mobile -->
+        <button id="mobile-menu-btn" type="button" class="lg:hidden inline-flex items-center justify-center p-2.5 rounded-lg text-provexis-silver hover:text-white hover:bg-provexis-graphite border border-provexis-border focus:outline-none" aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menu de navegação">
+          <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu Mobile Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-provexis-carbon border-b border-provexis-border px-4 pt-3 pb-6 space-y-2 shadow-2xl">
+      <a href="#solucao" class="mobile-nav-link block px-3.5 py-2.5 rounded-lg text-base font-medium text-provexis-silver hover:text-white hover:bg-provexis-graphite">Solução</a>
+      <a href="#metodologia" class="mobile-nav-link block px-3.5 py-2.5 rounded-lg text-base font-medium text-provexis-silver hover:text-white hover:bg-provexis-graphite">Metodologia</a>
+      <a href="#plataforma" class="mobile-nav-link block px-3.5 py-2.5 rounded-lg text-base font-medium text-provexis-silver hover:text-white hover:bg-provexis-graphite">Plataforma</a>
+      <a href="#indicadores" class="mobile-nav-link block px-3.5 py-2.5 rounded-lg text-base font-medium text-provexis-silver hover:text-white hover:bg-provexis-graphite">Indicadores</a>
+      <a href="#diferenciais" class="mobile-nav-link block px-3.5 py-2.5 rounded-lg text-base font-medium text-provexis-silver hover:text-white hover:bg-provexis-graphite">Diferenciais</a>
+      <a href="#segmentos" class="mobile-nav-link block px-3.5 py-2.5 rounded-lg text-base font-medium text-provexis-silver hover:text-white hover:bg-provexis-graphite">Segmentos</a>
+      <a href="#sobre" class="mobile-nav-link block px-3.5 py-2.5 rounded-lg text-base font-medium text-provexis-silver hover:text-white hover:bg-provexis-graphite">Sobre</a>
+      <div class="pt-3 border-t border-provexis-border">
+        <button type="button" onclick="openDiagnosticoModal('Mobile Menu - Solicitar Diagnóstico')" class="w-full flex items-center justify-center gap-2 px-5 py-3.5 rounded-lg bg-gradient-to-r from-provexis-red to-provexis-ember text-white font-semibold text-base shadow-provexis-glow">
+          <span>Solicitar Diagnóstico</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="topo" class="pt-20">
+
+    <!-- =========================================================
+         1. SEÇÃO HERO
+    ========================================================== -->
+    <section class="relative overflow-hidden bg-provexis-black bg-industrial-grid border-b border-provexis-border">
+      <!-- Radial Glow Industrial -->
+      <div class="pointer-events-none absolute -top-28 -left-24 w-[480px] h-[480px] rounded-full bg-provexis-red/12 blur-[120px]"></div>
+      <div class="pointer-events-none absolute bottom-0 right-0 w-[520px] h-[520px] rounded-full bg-provexis-ember/10 blur-[140px]"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20 lg:py-24 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+
+          <!-- Coluna Esquerda: Posicionamento & Copy -->
+          <div class="lg:col-span-7 space-y-7">
+            <!-- Badge de Posicionamento -->
+            <div class="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full bg-provexis-graphite/90 border border-provexis-border text-xs font-mono tracking-wider text-provexis-silver uppercase">
+              <span class="w-2 h-2 rounded-full bg-provexis-red status-beacon"></span>
+              <span>Consultoria</span>
+              <span class="text-provexis-red">•</span>
+              <span>Engenharia da Manutenção</span>
+              <span class="text-provexis-red">•</span>
+              <span class="text-white font-semibold">Plataforma Própria</span>
+            </div>
+
+            <!-- Título Principal H1 -->
+            <div class="space-y-3">
+              <p class="font-display font-bold text-provexis-red tracking-[0.18em] text-sm sm:text-base uppercase">
+                PROVEXIS PCM
+              </p>
+              <h1 class="font-display font-bold text-3xl sm:text-5xl lg:text-[3.35rem] text-white leading-[1.1] tracking-tight">
+                Da manutenção reativa ao <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-provexis-silver">controle total.</span>
+              </h1>
+            </div>
+
+            <!-- Subtítulo -->
+            <p class="text-base sm:text-lg text-provexis-silver leading-relaxed max-w-2xl">
+              Implantamos <strong class="text-white font-semibold">Planejamento e Controle da Manutenção (PCM)</strong>, estruturamos ativos, desenvolvemos planos preventivos e entregamos uma <strong class="text-white font-semibold">plataforma própria</strong> para transformar a manutenção em uma operação organizada, previsível e orientada por resultados.
+            </p>
+
+            <!-- Texto Destaque: 3 Pilares -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
+              <div class="flex items-center gap-3 px-4 py-3 rounded-xl bg-provexis-graphite/90 border border-provexis-border">
+                <div class="w-8 h-8 rounded-lg bg-provexis-red/15 border border-provexis-red/30 flex items-center justify-center text-provexis-red shrink-0">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                </div>
+                <span class="text-sm font-semibold text-white">Mais disponibilidade.</span>
+              </div>
+              <div class="flex items-center gap-3 px-4 py-3 rounded-xl bg-provexis-graphite/90 border border-provexis-border">
+                <div class="w-8 h-8 rounded-lg bg-provexis-red/15 border border-provexis-red/30 flex items-center justify-center text-provexis-red shrink-0">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <span class="text-sm font-semibold text-white">Menos paradas.</span>
+              </div>
+              <div class="flex items-center gap-3 px-4 py-3 rounded-xl bg-provexis-graphite/90 border border-provexis-border">
+                <div class="w-8 h-8 rounded-lg bg-provexis-red/15 border border-provexis-red/30 flex items-center justify-center text-provexis-red shrink-0">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+                </div>
+                <span class="text-sm font-semibold text-white">Mais controle.</span>
+              </div>
+            </div>
+
+            <!-- Botões CTA -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+              <button type="button" onclick="openDiagnosticoModal('Hero - Solicitar Diagnóstico')" class="inline-flex items-center justify-center gap-3 px-7 py-4 rounded-xl bg-gradient-to-r from-provexis-red to-provexis-ember hover:from-provexis-ember hover:to-provexis-red text-white font-bold text-base shadow-provexis-glow-strong transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer">
+                <span>Solicitar Diagnóstico</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </button>
+              <a href="#solucao" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-provexis-graphite hover:bg-provexis-panel text-white font-semibold text-base border border-provexis-border hover:border-provexis-steel/60 transition-all duration-300">
+                <span>Conhecer a Solução</span>
+                <svg class="w-4 h-4 text-provexis-silver" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Coluna Direita: Console de Telemetria & Engenharia PCM -->
+          <div class="lg:col-span-5">
+            <div class="rounded-2xl brushed-metal top-telemetry-bar p-5 sm:p-6 shadow-industrial-card">
+              <!-- Barra Superior do Terminal Industrial -->
+              <div class="flex items-center justify-between pb-4 mb-5 border-b border-provexis-border">
+                <div class="flex items-center gap-2.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 status-beacon"></span>
+                  <span class="font-mono text-xs font-semibold tracking-wider text-white uppercase">PROVEXIS PCM // CONTROL CENTER</span>
+                </div>
+                <span class="font-mono text-[11px] px-2.5 py-0.5 rounded bg-provexis-black text-provexis-silver border border-provexis-border">PLANTA-01 • PR</span>
+              </div>
+
+              <!-- KPIs de Operação Simulados -->
+              <div class="grid grid-cols-2 gap-3.5 mb-5">
+                <div class="p-3.5 rounded-xl bg-provexis-black/80 border border-provexis-border">
+                  <div class="flex items-center justify-between text-[11px] font-mono text-provexis-steel">
+                    <span>DISPONIBILIDADE</span>
+                    <span class="text-emerald-400">+4.8%</span>
+                  </div>
+                  <div class="mt-1.5 flex items-baseline gap-2">
+                    <span class="font-display font-bold text-2xl sm:text-3xl text-white">97.4%</span>
+                    <span class="text-[11px] font-mono text-provexis-silver">META 96%</span>
+                  </div>
+                  <div class="mt-2.5 w-full h-1.5 bg-provexis-graphite rounded-full overflow-hidden">
+                    <div class="h-full bg-gradient-to-r from-provexis-red to-emerald-400 rounded-full" style="width: 97.4%"></div>
+                  </div>
+                </div>
+
+                <div class="p-3.5 rounded-xl bg-provexis-black/80 border border-provexis-border">
+                  <div class="flex items-center justify-between text-[11px] font-mono text-provexis-steel">
+                    <span>CUMPR. PREVENTIVAS</span>
+                    <span class="text-emerald-400">EM DIA</span>
+                  </div>
+                  <div class="mt-1.5 flex items-baseline gap-2">
+                    <span class="font-display font-bold text-2xl sm:text-3xl text-white">94.2%</span>
+                    <span class="text-[11px] font-mono text-provexis-silver">PMP ATIVO</span>
+                  </div>
+                  <div class="mt-2.5 w-full h-1.5 bg-provexis-graphite rounded-full overflow-hidden">
+                    <div class="h-full bg-provexis-red rounded-full" style="width: 94.2%"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Árvore de Ativos / Criticidade ABC -->
+              <div class="rounded-xl bg-provexis-black/80 border border-provexis-border p-4 mb-4">
+                <div class="flex items-center justify-between mb-3">
+                  <span class="font-mono text-[11px] uppercase tracking-wider text-provexis-silver">Árvore de Ativos Estruturada</span>
+                  <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-provexis-red/15 text-provexis-red border border-provexis-red/30">CRITICIDADE A</span>
+                </div>
+                <div class="space-y-2 font-mono text-xs">
+                  <div class="flex items-center justify-between px-3 py-2 rounded-lg bg-provexis-graphite/80 border border-provexis-border/70">
+                    <span class="text-white"><span class="text-provexis-red mr-1.5">▸</span>EXT-04 • Extrusora Principal</span>
+                    <span class="text-emerald-400 text-[11px]">OPERANDO</span>
+                  </div>
+                  <div class="flex items-center justify-between px-3 py-2 rounded-lg bg-provexis-graphite/80 border border-provexis-border/70">
+                    <span class="text-white"><span class="text-provexis-red mr-1.5">▸</span>CMP-02 • Compressor Parafuso</span>
+                    <span class="text-amber-400 text-[11px]">PMP 48H</span>
+                  </div>
+                  <div class="flex items-center justify-between px-3 py-2 rounded-lg bg-provexis-graphite/80 border border-provexis-border/70">
+                    <span class="text-white"><span class="text-provexis-red mr-1.5">▸</span>CNC-11 • Centro de Usinagem</span>
+                    <span class="text-emerald-400 text-[11px]">OPERANDO</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Métricas de Confiabilidade -->
+              <div class="grid grid-cols-3 gap-2.5 text-center font-mono">
+                <div class="p-2.5 rounded-lg bg-provexis-graphite/60 border border-provexis-border">
+                  <span class="block text-[10px] text-provexis-steel">MTBF</span>
+                  <span class="text-sm font-bold text-white">418h</span>
+                </div>
+                <div class="p-2.5 rounded-lg bg-provexis-graphite/60 border border-provexis-border">
+                  <span class="block text-[10px] text-provexis-steel">MTTR</span>
+                  <span class="text-sm font-bold text-white">1.4h</span>
+                </div>
+                <div class="p-2.5 rounded-lg bg-provexis-graphite/60 border border-provexis-border">
+                  <span class="block text-[10px] text-provexis-steel">BACKLOG</span>
+                  <span class="text-sm font-bold text-emerald-400">6.5 dias</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         2. SEÇÃO PROBLEMAS
+    ========================================================== -->
+    <section id="problemas" class="py-20 sm:py-24 bg-provexis-carbon border-b border-provexis-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center space-y-4 reveal-on-scroll">
+          <span class="inline-block font-mono text-xs font-semibold tracking-widest uppercase text-provexis-red px-3 py-1 rounded bg-provexis-red/10 border border-provexis-red/30">
+            DIAGNÓSTICO DE CENÁRIO INDUSTRIAL
+          </span>
+          <h2 class="font-display font-bold text-2xl sm:text-4xl text-white leading-tight">
+            A manutenção está controlando a fábrica ou a fábrica está controlando a manutenção?
+          </h2>
+          <p class="text-base sm:text-lg text-provexis-silver leading-relaxed">
+            Muitas empresas ainda operam com informações espalhadas entre planilhas, anotações, grupos de mensagens e controles paralelos. <strong class="text-white">O resultado é sempre o mesmo:</strong>
+          </p>
+        </div>
+
+        <!-- Grid de 7 Sintomas / Dores Operacionais -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 mt-12 reveal-on-scroll">
+          <!-- Item 1 -->
+          <div class="p-5 rounded-xl brushed-metal flex items-start gap-3.5">
+            <div class="w-9 h-9 rounded-lg bg-provexis-red/15 border border-provexis-red/35 flex items-center justify-center text-provexis-red shrink-0 mt-0.5">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+            </div>
+            <div>
+              <span class="font-mono text-[10px] text-provexis-steel uppercase">Risco 01</span>
+              <h3 class="font-semibold text-white text-base mt-0.5">Equipamentos sem histórico confiável</h3>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="p-5 rounded-xl brushed-metal flex items-start gap-3.5">
+            <div class="w-9 h-9 rounded-lg bg-provexis-red/15 border border-provexis-red/35 flex items-center justify-center text-provexis-red shrink-0 mt-0.5">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div>
+              <span class="font-mono text-[10px] text-provexis-steel uppercase">Risco 02</span>
+              <h3 class="font-semibold text-white text-base mt-0.5">Preventivas atrasadas</h3>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="p-5 rounded-xl brushed-metal flex items-start gap-3.5">
+            <div class="w-9 h-9 rounded-lg bg-provexis-red/15 border border-provexis-red/35 flex items-center justify-center text-provexis-red shrink-0 mt-0.5">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div>
+              <span class="font-mono text-[10px] text-provexis-steel uppercase">Risco 03</span>
+              <h3 class="font-semibold text-white text-base mt-0.5">Custos sem rastreabilidade</h3>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="p-5 rounded-xl brushed-metal flex items-start gap-3.5">
+            <div class="w-9 h-9 rounded-lg bg-provexis-red/15 border border-provexis-red/35 flex items-center justify-center text-provexis-red shrink-0 mt-0.5">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            </div>
+            <div>
+              <span class="font-mono text-[10px] text-provexis-steel uppercase">Risco 04</span>
+              <h3 class="font-semibold text-white text-base mt-0.5">Ordens de serviço sem padronização</h3>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="p-5 rounded-xl brushed-metal flex items-start gap-3.5">
+            <div class="w-9 h-9 rounded-lg bg-provexis-red/15 border border-provexis-red/35 flex items-center justify-center text-provexis-red shrink-0 mt-0.5">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+            </div>
+            <div>
+              <span class="font-mono text-[10px] text-provexis-steel uppercase">Risco 05</span>
+              <h3 class="font-semibold text-white text-base mt-0.5">Estoque técnico sem controle</h3>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="p-5 rounded-xl brushed-metal flex items-start gap-3.5">
+            <div class="w-9 h-9 rounded-lg bg-provexis-red/15 border border-provexis-red/35 flex items-center justify-center text-provexis-red shrink-0 mt-0.5">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            </div>
+            <div>
+              <span class="font-mono text-[10px] text-provexis-steel uppercase">Risco 06</span>
+              <h3 class="font-semibold text-white text-base mt-0.5">Indicadores inconsistentes</h3>
+            </div>
+          </div>
+
+          <!-- Item 7 (Ocupa 2 colunas em desktop para equilíbrio simétrico) -->
+          <div class="sm:col-span-2 p-5 rounded-xl brushed-metal flex items-start gap-3.5 border-provexis-red/30">
+            <div class="w-9 h-9 rounded-lg bg-provexis-red/20 border border-provexis-red/40 flex items-center justify-center text-provexis-red shrink-0 mt-0.5">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/></svg>
+            </div>
+            <div>
+              <span class="font-mono text-[10px] text-provexis-red uppercase">Risco Crítico 07</span>
+              <h3 class="font-semibold text-white text-base mt-0.5">Equipes atuando de forma reativa</h3>
+              <p class="text-xs text-provexis-silver mt-1">Alta pressão operacional, horas extras recorrentes e paradas não programadas na produção.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mensagem Final em Destaque -->
+        <div class="mt-10 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-provexis-red/15 via-provexis-graphite to-provexis-graphite border border-provexis-red/40 flex flex-col md:flex-row items-center justify-between gap-6 reveal-on-scroll">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-provexis-red flex items-center justify-center text-white shrink-0 shadow-provexis-glow">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <p class="font-display font-bold text-lg sm:text-xl text-white leading-snug">
+              Quando isso acontece, a manutenção deixa de ser estratégica e passa a trabalhar apagando incêndios.
+            </p>
+          </div>
+          <button type="button" onclick="openDiagnosticoModal('Secao Problemas - Reverter Cenario')" class="shrink-0 px-5 py-3 rounded-xl bg-provexis-black hover:bg-provexis-red text-white font-semibold text-sm border border-provexis-red/50 transition-colors cursor-pointer">
+            Mudar esse cenário →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         3. SEÇÃO SOLUÇÃO PROVEXIS
+    ========================================================== -->
+    <section id="solucao" class="py-20 sm:py-24 bg-provexis-black bg-industrial-grid border-b border-provexis-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center space-y-4 reveal-on-scroll">
+          <span class="inline-block font-mono text-xs font-semibold tracking-widest uppercase text-provexis-red px-3 py-1 rounded bg-provexis-red/10 border border-provexis-red/30">
+            ARQUITETURA INTEGRADA DE PCM
+          </span>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white">
+            A Solução PROVEXIS
+          </h2>
+          <p class="text-base sm:text-lg text-provexis-silver leading-relaxed">
+            A PROVEXIS une <strong class="text-white">consultoria, engenharia de manutenção e tecnologia</strong> em uma única metodologia. <span class="text-white font-semibold">Não entregamos apenas um sistema.</span> Implantamos uma estrutura completa de gestão da manutenção.
+          </p>
+        </div>
+
+        <!-- Grid de 6 Pilares da Solução -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-14 reveal-on-scroll">
+          <!-- Card 01 -->
+          <div class="p-6 sm:p-7 rounded-2xl brushed-metal top-telemetry-bar transition-all duration-300 hover:-translate-y-1 shadow-industrial-card">
+            <div class="flex items-center justify-between mb-5">
+              <div class="w-12 h-12 rounded-xl bg-provexis-red/15 border border-provexis-red/35 flex items-center justify-center text-provexis-red">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+              </div>
+              <span class="font-mono text-sm font-bold text-provexis-steel">01</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white mb-2">Diagnóstico da Operação</h3>
+            <p class="text-sm sm:text-base text-provexis-silver leading-relaxed">Mapeamento da situação atual da manutenção.</p>
+          </div>
+
+          <!-- Card 02 -->
+          <div class="p-6 sm:p-7 rounded-2xl brushed-metal top-telemetry-bar transition-all duration-300 hover:-translate-y-1 shadow-industrial-card">
+            <div class="flex items-center justify-between mb-5">
+              <div class="w-12 h-12 rounded-xl bg-provexis-red/15 border border-provexis-red/35 flex items-center justify-center text-provexis-red">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+              </div>
+              <span class="font-mono text-sm font-bold text-provexis-steel">02</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white mb-2">Estruturação dos Ativos</h3>
+            <p class="text-sm sm:text-base text-provexis-silver leading-relaxed">Organização da árvore de ativos e base técnica.</p>
+          </div>
+
+          <!-- Card 03 -->
+          <div class="p-6 sm:p-7 rounded-2xl brushed-metal top-telemetry-bar transition-all duration-300 hover:-translate-y-1 shadow-industrial-card">
+            <div class="flex items-center justify-between mb-5">
+              <div class="w-12 h-12 rounded-xl bg-provexis-red/15 border border-provexis-red/35 flex items-center justify-center text-provexis-red">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              </div>
+              <span class="font-mono text-sm font-bold text-provexis-steel">03</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white mb-2">Planos Preventivos</h3>
+            <p class="text-sm sm:text-base text-provexis-silver leading-relaxed">Desenvolvimento de PMPs e programas de inspeção.</p>
+          </div>
+
+          <!-- Card 04 -->
+          <div class="p-6 sm:p-7 rounded-2xl brushed-metal top-telemetry-bar transition-all duration-300 hover:-translate-y-1 shadow-industrial-card">
+            <div class="flex items-center justify-between mb-5">
+              <div class="w-12 h-12 rounded-xl bg-provexis-red/15 border border-provexis-red/35 flex items-center justify-center text-provexis-red">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+              </div>
+              <span class="font-mono text-sm font-bold text-provexis-steel">04</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white mb-2">Gestão de Estoque Técnico</h3>
+            <p class="text-sm sm:text-base text-provexis-silver leading-relaxed">Controle de materiais e sobressalentes.</p>
+          </div>
+
+          <!-- Card 05 -->
+          <div class="p-6 sm:p-7 rounded-2xl brushed-metal top-telemetry-bar transition-all duration-300 hover:-translate-y-1 shadow-industrial-card">
+            <div class="flex items-center justify-between mb-5">
+              <div class="w-12 h-12 rounded-xl bg-provexis-red/15 border border-provexis-red/35 flex items-center justify-center text-provexis-red">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              </div>
+              <span class="font-mono text-sm font-bold text-provexis-steel">05</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white mb-2">Governança da Manutenção</h3>
+            <p class="text-sm sm:text-base text-provexis-silver leading-relaxed">Padronização de processos e responsabilidades.</p>
+          </div>
+
+          <!-- Card 06 -->
+          <div class="p-6 sm:p-7 rounded-2xl brushed-metal top-telemetry-bar transition-all duration-300 hover:-translate-y-1 shadow-industrial-card border-provexis-red/40">
+            <div class="flex items-center justify-between mb-5">
+              <div class="w-12 h-12 rounded-xl bg-provexis-red flex items-center justify-center text-white shadow-provexis-glow">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+              <span class="font-mono text-sm font-bold text-provexis-red">06</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white mb-2">Plataforma PROVEXIS PCM</h3>
+            <p class="text-sm sm:text-base text-provexis-silver leading-relaxed">Toda a operação centralizada em um único ambiente digital.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         4. SEÇÃO METODOLOGIA (TIMELINE VISUAL FASE 0 A FASE 6)
+    ========================================================== -->
+    <section id="metodologia" class="py-20 sm:py-24 bg-provexis-carbon border-b border-provexis-border">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-16 reveal-on-scroll">
+          <span class="inline-block font-mono text-xs font-semibold tracking-widest uppercase text-provexis-red px-3 py-1 rounded bg-provexis-red/10 border border-provexis-red/30">
+            ROTEIRO DE IMPLANTAÇÃO ESTRUTURADA
+          </span>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white">
+            Como Funciona
+          </h2>
+          <p class="text-base sm:text-lg text-provexis-silver">
+            Metodologia em 7 fases sequenciais para sair do caos operacional e consolidar uma engenharia de manutenção de alta confiabilidade.
+          </p>
+        </div>
+
+        <!-- Timeline Vertical -->
+        <div class="relative pl-8 sm:pl-12 border-l-2 border-provexis-red/50 space-y-8 reveal-on-scroll">
+
+          <!-- Fase 0 -->
+          <div class="relative p-6 rounded-2xl brushed-metal shadow-industrial-card">
+            <span class="absolute -left-[43px] sm:-left-[59px] top-6 w-5 h-5 rounded-full bg-provexis-red ring-4 ring-provexis-carbon shadow-provexis-glow"></span>
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+              <span class="font-mono text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-provexis-red/15 text-provexis-red border border-provexis-red/35">Fase 0</span>
+              <span class="font-mono text-xs text-provexis-steel">BASELINE & DIAGNÓSTICO</span>
+            </div>
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-white mb-4">Diagnóstico Executivo</h3>
+            <p class="font-mono text-xs uppercase tracking-wider text-provexis-silver mb-3">Entregáveis:</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-sm text-provexis-silver">
+              <div class="flex items-center gap-2"><span class="text-provexis-red font-bold">▪</span> Diagnóstico da maturidade da manutenção</div>
+              <div class="flex items-center gap-2"><span class="text-provexis-red font-bold">▪</span> Identificação de gargalos</div>
+              <div class="flex items-center gap-2"><span class="text-provexis-red font-bold">▪</span> Avaliação de riscos</div>
+              <div class="flex items-center gap-2"><span class="text-provexis-red font-bold">▪</span> Plano de ação recomendado</div>
+            </div>
+          </div>
+
+          <!-- Fase 1 -->
+          <div class="relative p-6 rounded-2xl brushed-metal shadow-industrial-card">
+            <span class="absolute -left-[43px] sm:-left-[59px] top-6 w-5 h-5 rounded-full bg-provexis-red ring-4 ring-provexis-carbon shadow-provexis-glow"></span>
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+              <span class="font-mono text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-provexis-red/15 text-provexis-red border border-provexis-red/35">Fase 1</span>
+              <span class="font-mono text-xs text-provexis-steel">TAXONOMIA ISO 14224</span>
+            </div>
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-white mb-4">Estruturação dos Ativos</h3>
+
+            <!-- Hierarquia Visual -->
+            <div class="p-4 rounded-xl bg-provexis-black/90 border border-provexis-border mb-5">
+              <span class="block font-mono text-[11px] uppercase tracking-wider text-provexis-steel mb-2.5">Hierarquia Estruturada:</span>
+              <div class="flex flex-wrap items-center gap-2 font-mono text-xs sm:text-sm">
+                <span class="px-3 py-1.5 rounded-lg bg-provexis-graphite text-white border border-provexis-border font-semibold">Planta</span>
+                <span class="text-provexis-red font-bold">→</span>
+                <span class="px-3 py-1.5 rounded-lg bg-provexis-graphite text-white border border-provexis-border font-semibold">Área</span>
+                <span class="text-provexis-red font-bold">→</span>
+                <span class="px-3 py-1.5 rounded-lg bg-provexis-graphite text-white border border-provexis-border font-semibold">Setor</span>
+                <span class="text-provexis-red font-bold">→</span>
+                <span class="px-3 py-1.5 rounded-lg bg-provexis-graphite text-white border border-provexis-border font-semibold">Equipamento</span>
+                <span class="text-provexis-red font-bold">→</span>
+                <span class="px-3 py-1.5 rounded-lg bg-provexis-red/20 text-white border border-provexis-red/50 font-semibold">Componente</span>
+              </div>
+            </div>
+
+            <p class="font-mono text-xs uppercase tracking-wider text-provexis-silver mb-3">Entregáveis:</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-sm text-provexis-silver">
+              <div class="flex items-center gap-2"><span class="text-provexis-red font-bold">▪</span> Inventário técnico</div>
+              <div class="flex items-center gap-2"><span class="text-provexis-red font-bold">▪</span> Tagueamento</div>
+              <div class="flex items-center gap-2"><span class="text-provexis-red font-bold">▪</span> Criticidade ABC</div>
+              <div class="flex items-center gap-2"><span class="text-provexis-red font-bold">▪</span> Fichas técnicas</div>
+            </div>
+          </div>
+
+          <!-- Fase 2 -->
+          <div class="relative p-6 rounded-2xl brushed-metal shadow-industrial-card">
+            <span class="absolute -left-[43px] sm:-left-[59px] top-6 w-5 h-5 rounded-full bg-provexis-red ring-4 ring-provexis-carbon shadow-provexis-glow"></span>
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+              <span class="font-mono text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-provexis-red/15 text-provexis-red border border-provexis-red/35">Fase 2</span>
+              <span class="font-mono text-xs text-provexis-steel">CONFIABILIDADE & PREVENTIVA</span>
+            </div>
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-white mb-4">Engenharia de Manutenção</h3>
+            <p class="font-mono text-xs uppercase tracking-wider text-provexis-silver mb-3">Entregáveis:</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 text-sm text-provexis-silver">
+              <div class="flex items-center gap-2"><span class="text-provexis-red font-bold">▪</span> PMPs</div>
+              <div class="flex items-center gap-2"><span class="text-provexis-red font-bold">▪</span> Checklists</div>
+              <div class="flex items-center gap-2"><span class="text-provexis-red font-bold">▪</span> LALV</div>
+              <div class="flex items-center gap-2"><span class="text-provexis-red font-bold">▪</span> Procedimentos operacionais</div>
+              <div class="flex items-center gap-2 sm:col-span-2"><span class="text-provexis-red font-bold">▪</span> Rotinas de inspeção</div>
+            </div>
+          </div>
+
+          <!-- Fase 3 -->
+          <div class="relative p-6 rounded-2xl brushed-metal shadow-industrial-card">
+            <span class="absolute -left-[43px] sm:-left-[59px] top-6 w-5 h-5 rounded-full bg-provexis-red ring-4 ring-provexis-carbon shadow-provexis-glow"></span>
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+              <span class="font-mono text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-provexis-red/15 text-provexis-red border border-provexis-red/35">Fase 3</span>
+              <span class="font-mono text-xs text-provexis-steel">MRO & SOBRESSALENTES</span>
+            </div>
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-white mb-4">Estoque Técnico</h3>
+            <p class="font-mono text-xs uppercase tracking-wider text-provexis-silver mb-3">Entregáveis:</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-sm text-provexis-silver">
+              <div class="flex items-center gap-2"><span class="text-provexis-red font-bold">▪</span> Cadastro de materiais</div>
+              <div class="flex items-center gap-2"><span class="text-provexis-red font-bold">▪</span> Estoque mínimo e máximo</div>
+              <div class="flex items-center gap-2"><span class="text-provexis-red font-bold">▪</span> Classificação de criticidade</div>
+              <div class="flex items-center gap-2"><span class="text-provexis-red font-bold">▪</span> Integração com manutenção</div>
+            </div>
+          </div>
+
+          <!-- Fase 4 -->
+          <div class="relative p-6 rounded-2xl brushed-metal shadow-industrial-card">
+            <span class="absolute -left-[43px] sm:-left-[59px] top-6 w-5 h-5 rounded-full bg-provexis-red ring-4 ring-provexis-carbon shadow-provexis-glow"></span>
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+              <span class="font-mono text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-provexis-red/15 text-provexis-red border border-provexis-red/35">Fase 4</span>
+              <span class="font-mono text-xs text-provexis-steel">PROCESSOS & FLUXOS</span>
+            </div>
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-white mb-4">Governança da Manutenção</h3>
+            <p class="font-mono text-xs uppercase tracking-wider text-provexis-silver mb-3">Entregáveis:</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-sm text-provexis-silver">
+              <div class="flex items-center gap-2"><span class="text-provexis-red font-bold">▪</span> Fluxo de solicitações</div>
+              <div class="flex items-center gap-2"><span class="text-provexis-red font-bold">▪</span> Fluxo de ordens de serviço</div>
+              <div class="flex items-center gap-2"><span class="text-provexis-red font-bold">▪</span> Definição de responsabilidades</div>
+              <div class="flex items-center gap-2"><span class="text-provexis-red font-bold">▪</span> Padronização operacional</div>
+            </div>
+          </div>
+
+          <!-- Fase 5 -->
+          <div class="relative p-6 rounded-2xl brushed-metal shadow-industrial-card border-provexis-red/35">
+            <span class="absolute -left-[43px] sm:-left-[59px] top-6 w-5 h-5 rounded-full bg-provexis-red ring-4 ring-provexis-carbon shadow-provexis-glow"></span>
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+              <span class="font-mono text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-provexis-red text-white">Fase 5</span>
+              <span class="font-mono text-xs text-provexis-steel">DEPLOY TECNOLÓGICO</span>
+            </div>
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-white mb-2">Implantação da Plataforma PROVEXIS PCM</h3>
+            <p class="text-sm sm:text-base text-provexis-silver">Configuração completa da solução com toda a árvore de ativos, planos preventivos, fluxos de aprovação e estoque técnico parametrizados para a planta.</p>
+          </div>
+
+          <!-- Fase 6 -->
+          <div class="relative p-6 rounded-2xl brushed-metal shadow-industrial-card">
+            <span class="absolute -left-[43px] sm:-left-[59px] top-6 w-5 h-5 rounded-full bg-emerald-400 ring-4 ring-provexis-carbon"></span>
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+              <span class="font-mono text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-emerald-500/15 text-emerald-400 border border-emerald-500/35">Fase 6</span>
+              <span class="font-mono text-xs text-provexis-steel">ADOÇÃO & CULTURA</span>
+            </div>
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-white mb-2">Capacitação das Equipes</h3>
+            <p class="text-sm sm:text-base text-provexis-silver">Treinamento prático e direcionado de gestores, técnicos de manutenção e solicitantes da produção.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         5. SEÇÃO PLATAFORMA PROVEXIS PCM
+    ========================================================== -->
+    <section id="plataforma" class="py-20 sm:py-24 bg-provexis-black bg-industrial-grid border-b border-provexis-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center space-y-4 reveal-on-scroll">
+          <span class="inline-block font-mono text-xs font-semibold tracking-widest uppercase text-provexis-red px-3 py-1 rounded bg-provexis-red/10 border border-provexis-red/30">
+            TECNOLOGIA PROPRIETÁRIA
+          </span>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white">
+            Plataforma PROVEXIS PCM
+          </h2>
+          <p class="text-base sm:text-lg text-provexis-silver">
+            Uma solução desenvolvida para a realidade da indústria.
+          </p>
+        </div>
+
+        <!-- Showcase Interativo / Espaço Reservado para Prints Reais do Sistema -->
+        <div class="mt-12 rounded-2xl brushed-metal p-4 sm:p-6 lg:p-8 shadow-industrial-card reveal-on-scroll">
+          <!-- Abas de Visualização do Sistema -->
+          <div class="flex flex-wrap items-center justify-between gap-4 pb-5 mb-6 border-b border-provexis-border">
+            <div class="flex flex-wrap gap-2" role="tablist" aria-label="Telas da Plataforma PROVEXIS PCM">
+              <button type="button" onclick="switchPlatformTab('dashboard')" id="tab-btn-dashboard" class="platform-tab-btn px-4 py-2 rounded-lg font-mono text-xs font-semibold bg-provexis-red text-white transition-all cursor-pointer">
+                01. Dashboard Executivo
+              </button>
+              <button type="button" onclick="switchPlatformTab('ativos')" id="tab-btn-ativos" class="platform-tab-btn px-4 py-2 rounded-lg font-mono text-xs font-semibold bg-provexis-black text-provexis-silver hover:text-white border border-provexis-border transition-all cursor-pointer">
+                02. Gestão de Ativos
+              </button>
+              <button type="button" onclick="switchPlatformTab('os')" id="tab-btn-os" class="platform-tab-btn px-4 py-2 rounded-lg font-mono text-xs font-semibold bg-provexis-black text-provexis-silver hover:text-white border border-provexis-border transition-all cursor-pointer">
+                03. Ordens de Serviço
+              </button>
+              <button type="button" onclick="switchPlatformTab('solicitante')" id="tab-btn-solicitante" class="platform-tab-btn px-4 py-2 rounded-lg font-mono text-xs font-semibold bg-provexis-black text-provexis-silver hover:text-white border border-provexis-border transition-all cursor-pointer">
+                04. Portal do Solicitante
+              </button>
+            </div>
+            <div class="flex items-center gap-2 font-mono text-[11px] text-provexis-steel">
+              <span class="w-2 h-2 rounded-full bg-provexis-red"></span>
+              <span>PREVIEW DE INTERFACE & ÁREA PARA SCREENSHOTS REAIS</span>
+            </div>
+          </div>
+
+          <!-- Moldura de Navegador Industrial -->
+          <div class="rounded-xl bg-provexis-black border border-provexis-border overflow-hidden">
+            <!-- Top Bar do Browser -->
+            <div class="px-4 py-2.5 bg-provexis-graphite border-b border-provexis-border flex items-center justify-between">
+              <div class="flex items-center gap-1.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-provexis-red/80"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-amber-500/80"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></span>
+              </div>
+              <div class="font-mono text-[11px] text-provexis-silver bg-provexis-black px-3 py-1 rounded border border-provexis-border">
+                app.provexis.com.br/pcm/operacao
+              </div>
+              <span class="font-mono text-[10px] text-emerald-400 hidden sm:inline">● CONECTADO</span>
+            </div>
+
+            <!-- Conteúdo Dinâmico das Abas + Área Reservada para Prints Reais -->
+            <div id="platform-preview-content" class="p-5 sm:p-8 min-h-[320px] flex flex-col justify-between">
+              <!-- Aba 1: Dashboard (Padrão) -->
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                <div class="lg:col-span-5 space-y-4">
+                  <span class="font-mono text-xs text-provexis-red uppercase">MÓDULO EXECUTIVO // REAL-TIME</span>
+                  <h3 class="font-display font-bold text-2xl text-white">Visão Gerencial e Controle Multi Planta</h3>
+                  <p class="text-sm text-provexis-silver leading-relaxed">
+                    Acompanhe MTBF, MTTR, disponibilidade física, backlog e cumprimento das preventivas em tempo real, com filtros por unidade, linha de produção e criticidade.
+                  </p>
+                  <div class="p-3.5 rounded-lg bg-provexis-graphite/80 border border-dashed border-provexis-steel/50 text-xs font-mono text-provexis-silver">
+                    [ESPAÇO RESERVADO PARA SCREENSHOT REAL DO SISTEMA — DASHBOARD EXECUTIVO PROVEXIS PCM]
+                  </div>
+                </div>
+                <div class="lg:col-span-7 rounded-xl bg-provexis-graphite border border-provexis-border p-4 sm:p-5 space-y-4">
+                  <div class="grid grid-cols-3 gap-3 font-mono">
+                    <div class="p-3 rounded-lg bg-provexis-black border border-provexis-border">
+                      <span class="text-[10px] text-provexis-steel block">O.S. ABERTAS</span>
+                      <span class="text-xl font-bold text-white">24</span>
+                    </div>
+                    <div class="p-3 rounded-lg bg-provexis-black border border-provexis-border">
+                      <span class="text-[10px] text-provexis-steel block">PREVENTIVAS MÊS</span>
+                      <span class="text-xl font-bold text-emerald-400">96%</span>
+                    </div>
+                    <div class="p-3 rounded-lg bg-provexis-black border border-provexis-border">
+                      <span class="text-[10px] text-provexis-steel block">CUSTO MRO</span>
+                      <span class="text-xl font-bold text-white">-18%</span>
+                    </div>
+                  </div>
+                  <!-- Gráfico de Barras Simulado -->
+                  <div class="p-4 rounded-lg bg-provexis-black border border-provexis-border">
+                    <div class="flex justify-between text-[11px] font-mono text-provexis-silver mb-3">
+                      <span>CUMPRIMENTO PMP vs CORRETIVAS (ÚLTIMOS 6 MESES)</span>
+                      <span class="text-provexis-red">META ≥ 90%</span>
+                    </div>
+                    <div class="grid grid-cols-6 gap-2 items-end h-28 pt-2">
+                      <div class="flex flex-col items-center gap-1"><div class="w-full bg-provexis-red/40 rounded-t h-12"></div><span class="text-[10px] font-mono text-provexis-steel">M1</span></div>
+                      <div class="flex flex-col items-center gap-1"><div class="w-full bg-provexis-red/55 rounded-t h-16"></div><span class="text-[10px] font-mono text-provexis-steel">M2</span></div>
+                      <div class="flex flex-col items-center gap-1"><div class="w-full bg-provexis-red/70 rounded-t h-20"></div><span class="text-[10px] font-mono text-provexis-steel">M3</span></div>
+                      <div class="flex flex-col items-center gap-1"><div class="w-full bg-provexis-red/85 rounded-t h-22"></div><span class="text-[10px] font-mono text-provexis-steel">M4</span></div>
+                      <div class="flex flex-col items-center gap-1"><div class="w-full bg-provexis-red rounded-t h-24"></div><span class="text-[10px] font-mono text-provexis-steel">M5</span></div>
+                      <div class="flex flex-col items-center gap-1"><div class="w-full bg-emerald-400 rounded-t h-28"></div><span class="text-[10px] font-mono text-white">M6</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grid dos 7 Módulos da Plataforma -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-10 reveal-on-scroll">
+          <!-- Módulo 1 -->
+          <div class="p-5 rounded-xl brushed-metal hover:-translate-y-1 transition-all">
+            <span class="font-mono text-xs text-provexis-red font-bold">MÓDULO 01</span>
+            <h3 class="font-display font-bold text-lg text-white mt-1.5">Gestão de Ativos</h3>
+            <p class="text-sm text-provexis-silver mt-1.5">Controle completo dos equipamentos.</p>
+          </div>
+          <!-- Módulo 2 -->
+          <div class="p-5 rounded-xl brushed-metal hover:-translate-y-1 transition-all">
+            <span class="font-mono text-xs text-provexis-red font-bold">MÓDULO 02</span>
+            <h3 class="font-display font-bold text-lg text-white mt-1.5">Ordens de Serviço</h3>
+            <p class="text-sm text-provexis-silver mt-1.5">Abertura, planejamento, execução e encerramento.</p>
+          </div>
+          <!-- Módulo 3 -->
+          <div class="p-5 rounded-xl brushed-metal hover:-translate-y-1 transition-all">
+            <span class="font-mono text-xs text-provexis-red font-bold">MÓDULO 03</span>
+            <h3 class="font-display font-bold text-lg text-white mt-1.5">Portal do Solicitante</h3>
+            <p class="text-sm text-provexis-silver mt-1.5">Chamados rápidos e organizados.</p>
+          </div>
+          <!-- Módulo 4 -->
+          <div class="p-5 rounded-xl brushed-metal hover:-translate-y-1 transition-all">
+            <span class="font-mono text-xs text-provexis-red font-bold">MÓDULO 04</span>
+            <h3 class="font-display font-bold text-lg text-white mt-1.5">Planejamento PCM</h3>
+            <p class="text-sm text-provexis-silver mt-1.5">Controle das preventivas e programação.</p>
+          </div>
+          <!-- Módulo 5 -->
+          <div class="p-5 rounded-xl brushed-metal hover:-translate-y-1 transition-all">
+            <span class="font-mono text-xs text-provexis-red font-bold">MÓDULO 05</span>
+            <h3 class="font-display font-bold text-lg text-white mt-1.5">Estoque Técnico</h3>
+            <p class="text-sm text-provexis-silver mt-1.5">Gestão de peças e materiais.</p>
+          </div>
+          <!-- Módulo 6 -->
+          <div class="p-5 rounded-xl brushed-metal hover:-translate-y-1 transition-all">
+            <span class="font-mono text-xs text-provexis-red font-bold">MÓDULO 06</span>
+            <h3 class="font-display font-bold text-lg text-white mt-1.5">Gestão Multi Planta</h3>
+            <p class="text-sm text-provexis-silver mt-1.5">Controle centralizado de múltiplas unidades.</p>
+          </div>
+          <!-- Módulo 7 -->
+          <div class="sm:col-span-2 p-5 rounded-xl brushed-metal border-provexis-red/40 hover:-translate-y-1 transition-all flex flex-col justify-center">
+            <span class="font-mono text-xs text-provexis-red font-bold">MÓDULO 07 • INTELIGÊNCIA GERENCIAL</span>
+            <h3 class="font-display font-bold text-lg text-white mt-1.5">Dashboard Executivo</h3>
+            <p class="text-sm text-provexis-silver mt-1.5">Indicadores em tempo real para diretoria, gerência industrial e coordenação de PCM.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         6. SEÇÃO INDICADORES
+    ========================================================== -->
+    <section id="indicadores" class="py-20 sm:py-24 bg-provexis-carbon border-b border-provexis-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center space-y-4 reveal-on-scroll">
+          <span class="inline-block font-mono text-xs font-semibold tracking-widest uppercase text-provexis-red px-3 py-1 rounded bg-provexis-red/10 border border-provexis-red/30">
+            KPIs & CONFIABILIDADE INDUSTRIAL
+          </span>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white">
+            Indicadores que Geram Decisão
+          </h2>
+          <p class="text-base sm:text-lg text-provexis-silver">
+            Transforme dados operacionais em ações práticas.
+          </p>
+        </div>
+
+        <!-- Grid de 8 KPIs -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-12 reveal-on-scroll">
+          <!-- KPI 1 -->
+          <div class="p-6 rounded-2xl brushed-metal top-telemetry-bar">
+            <div class="flex items-center justify-between mb-3">
+              <span class="font-mono text-xs font-bold px-2.5 py-1 rounded bg-provexis-red/15 text-provexis-red border border-provexis-red/30">KPI 01</span>
+              <span class="font-mono text-[11px] text-emerald-400">CONFIABILIDADE</span>
+            </div>
+            <h3 class="font-display font-bold text-2xl text-white">MTBF</h3>
+            <p class="text-sm text-provexis-silver mt-1.5">Tempo médio entre falhas.</p>
+          </div>
+
+          <!-- KPI 2 -->
+          <div class="p-6 rounded-2xl brushed-metal top-telemetry-bar">
+            <div class="flex items-center justify-between mb-3">
+              <span class="font-mono text-xs font-bold px-2.5 py-1 rounded bg-provexis-red/15 text-provexis-red border border-provexis-red/30">KPI 02</span>
+              <span class="font-mono text-[11px] text-emerald-400">MANUTENIBILIDADE</span>
+            </div>
+            <h3 class="font-display font-bold text-2xl text-white">MTTR</h3>
+            <p class="text-sm text-provexis-silver mt-1.5">Tempo médio para reparo.</p>
+          </div>
+
+          <!-- KPI 3 -->
+          <div class="p-6 rounded-2xl brushed-metal top-telemetry-bar">
+            <div class="flex items-center justify-between mb-3">
+              <span class="font-mono text-xs font-bold px-2.5 py-1 rounded bg-provexis-red/15 text-provexis-red border border-provexis-red/30">KPI 03</span>
+              <span class="font-mono text-[11px] text-emerald-400">EFICIÊNCIA</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white">Disponibilidade Física</h3>
+            <p class="text-sm text-provexis-silver mt-1.5">Performance operacional dos ativos.</p>
+          </div>
+
+          <!-- KPI 4 -->
+          <div class="p-6 rounded-2xl brushed-metal top-telemetry-bar">
+            <div class="flex items-center justify-between mb-3">
+              <span class="font-mono text-xs font-bold px-2.5 py-1 rounded bg-provexis-red/15 text-provexis-red border border-provexis-red/30">KPI 04</span>
+              <span class="font-mono text-[11px] text-amber-400">CAPACIDADE</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white">Backlog de Manutenção</h3>
+            <p class="text-sm text-provexis-silver mt-1.5">Controle da carga pendente.</p>
+          </div>
+
+          <!-- KPI 5 -->
+          <div class="p-6 rounded-2xl brushed-metal top-telemetry-bar">
+            <div class="flex items-center justify-between mb-3">
+              <span class="font-mono text-xs font-bold px-2.5 py-1 rounded bg-provexis-red/15 text-provexis-red border border-provexis-red/30">KPI 05</span>
+              <span class="font-mono text-[11px] text-provexis-silver">FINANCEIRO</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white">Custos de Manutenção</h3>
+            <p class="text-sm text-provexis-silver mt-1.5">Monitoramento financeiro da manutenção.</p>
+          </div>
+
+          <!-- KPI 6 -->
+          <div class="p-6 rounded-2xl brushed-metal top-telemetry-bar">
+            <div class="flex items-center justify-between mb-3">
+              <span class="font-mono text-xs font-bold px-2.5 py-1 rounded bg-provexis-red/15 text-provexis-red border border-provexis-red/30">KPI 06</span>
+              <span class="font-mono text-[11px] text-emerald-400">ADERÊNCIA</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white">Cumprimento das Preventivas</h3>
+            <p class="text-sm text-provexis-silver mt-1.5">Controle da execução dos planos.</p>
+          </div>
+
+          <!-- KPI 7 -->
+          <div class="p-6 rounded-2xl brushed-metal top-telemetry-bar">
+            <div class="flex items-center justify-between mb-3">
+              <span class="font-mono text-xs font-bold px-2.5 py-1 rounded bg-provexis-red/15 text-provexis-red border border-provexis-red/30">KPI 07</span>
+              <span class="font-mono text-[11px] text-emerald-400">AGILIDADE</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white">SLA de Atendimento</h3>
+            <p class="text-sm text-provexis-silver mt-1.5">Tempo de resposta da equipe.</p>
+          </div>
+
+          <!-- KPI 8 -->
+          <div class="p-6 rounded-2xl brushed-metal top-telemetry-bar">
+            <div class="flex items-center justify-between mb-3">
+              <span class="font-mono text-xs font-bold px-2.5 py-1 rounded bg-provexis-red/15 text-provexis-red border border-provexis-red/30">KPI 08</span>
+              <span class="font-mono text-[11px] text-provexis-silver">AUDITORIA</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white">Histórico dos Ativos</h3>
+            <p class="text-sm text-provexis-silver mt-1.5">Rastreabilidade completa das intervenções.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         7. SEÇÃO DIFERENCIAIS
+    ========================================================== -->
+    <section id="diferenciais" class="py-20 sm:py-24 bg-provexis-black bg-industrial-grid border-b border-provexis-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center space-y-4 reveal-on-scroll">
+          <span class="inline-block font-mono text-xs font-semibold tracking-widest uppercase text-provexis-red px-3 py-1 rounded bg-provexis-red/10 border border-provexis-red/30">
+            VANTAGEM COMPETITIVA REAL
+          </span>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white">
+            Por que escolher a PROVEXIS?
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 reveal-on-scroll">
+          <!-- Diferencial 1 -->
+          <div class="p-6 sm:p-7 rounded-2xl brushed-metal">
+            <div class="w-11 h-11 rounded-xl bg-provexis-red/15 border border-provexis-red/35 flex items-center justify-center text-provexis-red mb-4">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/></svg>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white mb-2">Consultoria + Engenharia + Tecnologia</h3>
+            <p class="text-sm sm:text-base text-provexis-silver leading-relaxed">Unimos metodologia, experiência prática e plataforma própria.</p>
+          </div>
+
+          <!-- Diferencial 2 -->
+          <div class="p-6 sm:p-7 rounded-2xl brushed-metal">
+            <div class="w-11 h-11 rounded-xl bg-provexis-red/15 border border-provexis-red/35 flex items-center justify-center text-provexis-red mb-4">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/></svg>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white mb-2">Plataforma Própria</h3>
+            <p class="text-sm sm:text-base text-provexis-silver leading-relaxed">Sem dependência de fornecedores externos.</p>
+          </div>
+
+          <!-- Diferencial 3 -->
+          <div class="p-6 sm:p-7 rounded-2xl brushed-metal">
+            <div class="w-11 h-11 rounded-xl bg-provexis-red/15 border border-provexis-red/35 flex items-center justify-center text-provexis-red mb-4">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white mb-2">Engenharia Reversa</h3>
+            <p class="text-sm sm:text-base text-provexis-silver leading-relaxed">Desenvolvimento e reconstrução de componentes quando necessário.</p>
+          </div>
+
+          <!-- Diferencial 4 -->
+          <div class="p-6 sm:p-7 rounded-2xl brushed-metal">
+            <div class="w-11 h-11 rounded-xl bg-provexis-red/15 border border-provexis-red/35 flex items-center justify-center text-provexis-red mb-4">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white mb-2">Portal do Solicitante</h3>
+            <p class="text-sm sm:text-base text-provexis-silver leading-relaxed">Comunicação direta entre operação e manutenção.</p>
+          </div>
+
+          <!-- Diferencial 5 -->
+          <div class="p-6 sm:p-7 rounded-2xl brushed-metal">
+            <div class="w-11 h-11 rounded-xl bg-provexis-red/15 border border-provexis-red/35 flex items-center justify-center text-provexis-red mb-4">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white mb-2">Indicadores em Tempo Real</h3>
+            <p class="text-sm sm:text-base text-provexis-silver leading-relaxed">Decisões baseadas em dados.</p>
+          </div>
+
+          <!-- Diferencial 6 -->
+          <div class="p-6 sm:p-7 rounded-2xl brushed-metal border-provexis-red/40">
+            <div class="w-11 h-11 rounded-xl bg-provexis-red flex items-center justify-center text-white mb-4 shadow-provexis-glow">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white mb-2">Foco em Resultado</h3>
+            <p class="text-sm sm:text-base text-provexis-silver leading-relaxed">Aumento da disponibilidade e redução de perdas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         8. SEÇÃO SEGMENTOS
+    ========================================================== -->
+    <section id="segmentos" class="py-20 sm:py-24 bg-provexis-carbon border-b border-provexis-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center space-y-4 reveal-on-scroll">
+          <span class="inline-block font-mono text-xs font-semibold tracking-widest uppercase text-provexis-red px-3 py-1 rounded bg-provexis-red/10 border border-provexis-red/30">
+            ATUAÇÃO INDUSTRIAL
+          </span>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white">
+            Para Quem é a PROVEXIS
+          </h2>
+          <p class="text-base sm:text-lg text-provexis-silver">
+            Atendemos empresas que desejam profissionalizar a gestão da manutenção.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-12 reveal-on-scroll">
+          <div class="p-5 rounded-xl brushed-metal flex items-center gap-3.5">
+            <span class="w-2.5 h-2.5 rounded-full bg-provexis-red shrink-0"></span>
+            <span class="font-display font-semibold text-white text-base">Indústrias Plásticas</span>
+          </div>
+          <div class="p-5 rounded-xl brushed-metal flex items-center gap-3.5">
+            <span class="w-2.5 h-2.5 rounded-full bg-provexis-red shrink-0"></span>
+            <span class="font-display font-semibold text-white text-base">Metalúrgicas</span>
+          </div>
+          <div class="p-5 rounded-xl brushed-metal flex items-center gap-3.5">
+            <span class="w-2.5 h-2.5 rounded-full bg-provexis-red shrink-0"></span>
+            <span class="font-display font-semibold text-white text-base">Alimentícias</span>
+          </div>
+          <div class="p-5 rounded-xl brushed-metal flex items-center gap-3.5">
+            <span class="w-2.5 h-2.5 rounded-full bg-provexis-red shrink-0"></span>
+            <span class="font-display font-semibold text-white text-base">Automotivas</span>
+          </div>
+          <div class="p-5 rounded-xl brushed-metal flex items-center gap-3.5">
+            <span class="w-2.5 h-2.5 rounded-full bg-provexis-red shrink-0"></span>
+            <span class="font-display font-semibold text-white text-base">Logística</span>
+          </div>
+          <div class="p-5 rounded-xl brushed-metal flex items-center gap-3.5">
+            <span class="w-2.5 h-2.5 rounded-full bg-provexis-red shrink-0"></span>
+            <span class="font-display font-semibold text-white text-base">Facilities</span>
+          </div>
+          <div class="sm:col-span-2 p-5 rounded-xl brushed-metal border-provexis-red/40 flex items-center gap-3.5">
+            <span class="w-2.5 h-2.5 rounded-full bg-provexis-red shrink-0 status-beacon"></span>
+            <span class="font-display font-semibold text-white text-base">Empresas com ativos industriais críticos</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         9. SEÇÃO ENTREGÁVEIS
+    ========================================================== -->
+    <section id="entregaveis" class="py-20 sm:py-24 bg-provexis-black bg-industrial-grid border-b border-provexis-border">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center space-y-4 mb-12 reveal-on-scroll">
+          <span class="inline-block font-mono text-xs font-semibold tracking-widest uppercase text-provexis-red px-3 py-1 rounded bg-provexis-red/10 border border-provexis-red/30">
+            ESCOPO DE ENTREGA GARANTIDO
+          </span>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white">
+            O que sua empresa recebe ao final do projeto
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 reveal-on-scroll">
+          <div class="p-5 rounded-xl brushed-metal flex items-center gap-3.5">
+            <div class="w-8 h-8 rounded-lg bg-emerald-500/15 border border-emerald-500/40 flex items-center justify-center text-emerald-400 shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <span class="font-semibold text-white text-base">Plataforma PROVEXIS PCM configurada</span>
+          </div>
+
+          <div class="p-5 rounded-xl brushed-metal flex items-center gap-3.5">
+            <div class="w-8 h-8 rounded-lg bg-emerald-500/15 border border-emerald-500/40 flex items-center justify-center text-emerald-400 shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <span class="font-semibold text-white text-base">Base de ativos estruturada</span>
+          </div>
+
+          <div class="p-5 rounded-xl brushed-metal flex items-center gap-3.5">
+            <div class="w-8 h-8 rounded-lg bg-emerald-500/15 border border-emerald-500/40 flex items-center justify-center text-emerald-400 shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <span class="font-semibold text-white text-base">Criticidade implementada</span>
+          </div>
+
+          <div class="p-5 rounded-xl brushed-metal flex items-center gap-3.5">
+            <div class="w-8 h-8 rounded-lg bg-emerald-500/15 border border-emerald-500/40 flex items-center justify-center text-emerald-400 shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <span class="font-semibold text-white text-base">Planos preventivos ativos</span>
+          </div>
+
+          <div class="p-5 rounded-xl brushed-metal flex items-center gap-3.5">
+            <div class="w-8 h-8 rounded-lg bg-emerald-500/15 border border-emerald-500/40 flex items-center justify-center text-emerald-400 shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <span class="font-semibold text-white text-base">Estoque técnico organizado</span>
+          </div>
+
+          <div class="p-5 rounded-xl brushed-metal flex items-center gap-3.5">
+            <div class="w-8 h-8 rounded-lg bg-emerald-500/15 border border-emerald-500/40 flex items-center justify-center text-emerald-400 shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <span class="font-semibold text-white text-base">Equipes treinadas</span>
+          </div>
+
+          <div class="p-5 rounded-xl brushed-metal flex items-center gap-3.5">
+            <div class="w-8 h-8 rounded-lg bg-emerald-500/15 border border-emerald-500/40 flex items-center justify-center text-emerald-400 shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <span class="font-semibold text-white text-base">Indicadores operacionais funcionando</span>
+          </div>
+
+          <div class="p-5 rounded-xl brushed-metal flex items-center gap-3.5">
+            <div class="w-8 h-8 rounded-lg bg-emerald-500/15 border border-emerald-500/40 flex items-center justify-center text-emerald-400 shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <span class="font-semibold text-white text-base">Processo de manutenção padronizado</span>
+          </div>
+
+          <div class="p-5 rounded-xl brushed-metal flex items-center gap-3.5">
+            <div class="w-8 h-8 rounded-lg bg-emerald-500/15 border border-emerald-500/40 flex items-center justify-center text-emerald-400 shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <span class="font-semibold text-white text-base">Governança consolidada</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         10. SEÇÃO SOBRE A PROVEXIS
+    ========================================================== -->
+    <section id="sobre" class="py-20 sm:py-24 bg-provexis-carbon border-b border-provexis-border">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 reveal-on-scroll">
+        <div class="rounded-3xl brushed-metal top-telemetry-bar p-8 sm:p-12 shadow-industrial-card">
+          <div class="space-y-6">
+            <span class="inline-block font-mono text-xs font-semibold tracking-widest uppercase text-provexis-red px-3 py-1 rounded bg-provexis-red/10 border border-provexis-red/30">
+              POSICIONAMENTO INSTITUCIONAL
+            </span>
+            <h2 class="font-display font-bold text-3xl sm:text-4xl text-white">
+              Sobre a PROVEXIS
+            </h2>
+            <p class="text-base sm:text-lg text-provexis-silver leading-relaxed">
+              A PROVEXIS nasceu da necessidade de transformar a manutenção em uma área estratégica.
+            </p>
+            <p class="text-sm font-mono uppercase tracking-wider text-provexis-steel">
+              Nossa proposta é simples:
+            </p>
+
+            <blockquote class="p-6 rounded-2xl bg-provexis-black/90 border-l-4 border-provexis-red">
+              <p class="font-display font-bold text-xl sm:text-2xl text-white leading-snug">
+                "Estruturar processos, organizar informações e criar uma cultura de gestão baseada em dados."
+              </p>
+            </blockquote>
+
+            <p class="text-base sm:text-lg text-provexis-silver leading-relaxed">
+              Mais do que implantar um sistema, implantamos uma forma diferente de gerir a manutenção.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         11. CTA FINAL + FORMULÁRIO DE DIAGNÓSTICO DE ALTA CONVERSÃO
+    ========================================================== -->
+    <section id="diagnostico" class="py-20 sm:py-28 bg-provexis-black bg-industrial-grid relative overflow-hidden">
+      <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-provexis-red/5 to-transparent"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+
+          <!-- Coluna Esquerda: Chamada Executiva -->
+          <div class="lg:col-span-6 space-y-6 reveal-on-scroll">
+            <span class="inline-block font-mono text-xs font-semibold tracking-widest uppercase text-provexis-red px-3 py-1 rounded bg-provexis-red/10 border border-provexis-red/30">
+              PRÓXIMO PASSO • DIAGNÓSTICO TÉCNICO
+            </span>
+            <h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white leading-tight">
+              Sua manutenção pode ser mais organizada, previsível e eficiente.
+            </h2>
+            <p class="text-base sm:text-lg text-provexis-silver leading-relaxed">
+              Solicite um diagnóstico e descubra como a PROVEXIS pode transformar a gestão da manutenção da sua empresa.
+            </p>
+
+            <div class="pt-2">
+              <button type="button" onclick="openDiagnosticoModal('CTA Final - Botao Principal')" class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-provexis-red to-provexis-ember hover:from-provexis-ember hover:to-provexis-red text-white font-bold text-base shadow-provexis-glow-strong transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer">
+                <span>Solicitar Diagnóstico</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </button>
+            </div>
+
+            <div class="pt-4 border-t border-provexis-border grid grid-cols-2 gap-4 font-mono text-xs text-provexis-silver">
+              <div>
+                <span class="block text-white font-semibold">ATENDIMENTO CONSULTIVO</span>
+                <span>Engenheiros e especialistas PCM</span>
+              </div>
+              <div>
+                <span class="block text-white font-semibold">DIAGNÓSTICO PERSONALIZADO</span>
+                <span>Para plantas industriais e facilities</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coluna Direita: Formulário Direto de Alta Conversão -->
+          <div class="lg:col-span-6 reveal-on-scroll">
+            <div class="rounded-2xl brushed-metal top-telemetry-bar p-6 sm:p-8 shadow-industrial-card">
+              <div class="mb-6">
+                <h3 class="font-display font-bold text-xl sm:text-2xl text-white">Agendar Diagnóstico Executivo</h3>
+                <p class="text-sm text-provexis-silver mt-1">Preencha os dados da sua operação para receber contato técnico da equipe PROVEXIS.</p>
+              </div>
+
+              <form id="inline-diagnostico-form" class="space-y-4" onsubmit="handleDiagnosticoSubmit(event, 'inline')">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="inline-nome" class="block text-xs font-mono uppercase text-provexis-silver mb-1.5">Nome Completo *</label>
+                    <input type="text" id="inline-nome" name="nome" required placeholder="Ex: Carlos Mendes" class="w-full px-4 py-3 rounded-xl bg-provexis-black border border-provexis-border text-white text-sm placeholder-provexis-steel/60 focus:outline-none focus:border-provexis-red transition-colors" />
+                  </div>
+                  <div>
+                    <label for="inline-cargo" class="block text-xs font-mono uppercase text-provexis-silver mb-1.5">Cargo *</label>
+                    <select id="inline-cargo" name="cargo" required class="w-full px-4 py-3 rounded-xl bg-provexis-black border border-provexis-border text-white text-sm focus:outline-none focus:border-provexis-red transition-colors">
+                      <option value="">Selecione seu cargo</option>
+                      <option value="Gerente de Manutenção">Gerente de Manutenção</option>
+                      <option value="Supervisor de Manutenção">Supervisor de Manutenção</option>
+                      <option value="Coordenador PCM">Coordenador PCM</option>
+                      <option value="Gerente Industrial">Gerente Industrial</option>
+                      <option value="Diretor Industrial">Diretor Industrial</option>
+                      <option value="Outro">Outro</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="inline-empresa" class="block text-xs font-mono uppercase text-provexis-silver mb-1.5">Empresa / Indústria *</label>
+                    <input type="text" id="inline-empresa" name="empresa" required placeholder="Nome da empresa" class="w-full px-4 py-3 rounded-xl bg-provexis-black border border-provexis-border text-white text-sm placeholder-provexis-steel/60 focus:outline-none focus:border-provexis-red transition-colors" />
+                  </div>
+                  <div>
+                    <label for="inline-telefone" class="block text-xs font-mono uppercase text-provexis-silver mb-1.5">Telefone / WhatsApp *</label>
+                    <input type="tel" id="inline-telefone" name="telefone" required placeholder="(41) 99999-9999" class="w-full px-4 py-3 rounded-xl bg-provexis-black border border-provexis-border text-white text-sm placeholder-provexis-steel/60 focus:outline-none focus:border-provexis-red transition-colors" />
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="inline-email" class="block text-xs font-mono uppercase text-provexis-silver mb-1.5">E-mail Corporativo *</label>
+                    <input type="email" id="inline-email" name="email" required placeholder="nome@suaempresa.com.br" class="w-full px-4 py-3 rounded-xl bg-provexis-black border border-provexis-border text-white text-sm placeholder-provexis-steel/60 focus:outline-none focus:border-provexis-red transition-colors" />
+                  </div>
+                  <div>
+                    <label for="inline-servico" class="block text-xs font-mono uppercase text-provexis-silver mb-1.5">Foco Principal *</label>
+                    <select id="inline-servico" name="servico" required class="w-full px-4 py-3 rounded-xl bg-provexis-black border border-provexis-border text-white text-sm focus:outline-none focus:border-provexis-red transition-colors">
+                      <option value="Implantação Completa de PCM + Plataforma">Implantação Completa de PCM + Plataforma</option>
+                      <option value="Estruturação de Ativos e Criticidade">Estruturação de Ativos e Criticidade</option>
+                      <option value="Engenharia de Manutenção e Planos Preventivos">Engenharia de Manutenção e Planos Preventivos</option>
+                      <option value="Gestão de Estoque Técnico">Gestão de Estoque Técnico</option>
+                      <option value="Governança e Indicadores de Performance">Governança e Indicadores de Performance</option>
+                      <option value="Plataforma PROVEXIS PCM">Plataforma PROVEXIS PCM</option>
+                    </select>
+                  </div>
+                </div>
+
+                <button type="submit" class="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-provexis-red to-provexis-ember hover:from-provexis-ember hover:to-provexis-red text-white font-bold text-base shadow-provexis-glow transition-all duration-300 cursor-pointer">
+                  Solicitar Diagnóstico
+                </button>
+              </form>
+
+              <!-- Feedback de Sucesso Inline -->
+              <div id="inline-form-success" class="hidden p-6 rounded-xl bg-emerald-500/10 border border-emerald-500/40 text-center space-y-3">
+                <div class="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <h4 class="font-display font-bold text-xl text-white">Solicitação de Diagnóstico Registrada!</h4>
+                <p class="text-sm text-provexis-silver" id="inline-success-msg"></p>
+                <button type="button" onclick="resetForm('inline')" class="text-xs font-mono text-provexis-red hover:underline cursor-pointer">Enviar nova solicitação</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================
+       12. RODAPÉ
+  ========================================================== -->
+  <footer class="bg-provexis-carbon border-t border-provexis-border pt-16 pb-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-provexis-border">
+
+        <!-- Marca & Posicionamento -->
+        <div class="lg:col-span-5 space-y-4">
+          <a href="#topo" class="inline-flex items-center gap-3.5" aria-label="PROVEXIS PCM">
+            <svg class="w-11 h-12 shrink-0" viewBox="0 0 100 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M50 4L10 27V85L24 93V58L50 73L86 52V25L50 4ZM50 56L24 41V34L50 19L71 31V44L50 56Z" fill="#FF1E1E"/>
+              <path d="M90 61L54 82L34 70L24 76V93L50 108L90 85V61ZM76 77L50 92L38 85L54 76L76 63V77Z" fill="#FF1E1E"/>
+            </svg>
+            <div class="flex flex-col leading-none">
+              <span class="font-display font-extrabold text-2xl tracking-wider text-white">PROVEXIS PCM</span>
+              <span class="text-[10px] font-medium tracking-[0.22em] text-provexis-silver uppercase mt-1.5">Performance que se prova.</span>
+            </div>
+          </a>
+          <p class="text-sm text-provexis-silver max-w-md leading-relaxed pt-2">
+            Consultoria, Engenharia da Manutenção e Implantação de PCM com Plataforma Própria. Estruturando processos, ativos e indicadores para máxima disponibilidade industrial.
+          </p>
+        </div>
+
+        <!-- Serviços -->
+        <div class="lg:col-span-4 space-y-3">
+          <h4 class="font-mono text-xs font-bold uppercase tracking-wider text-white">Especialidades PROVEXIS</h4>
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-provexis-silver">
+            <li><a href="#solucao" class="hover:text-white transition-colors">Implantação de PCM</a></li>
+            <li><a href="#metodologia" class="hover:text-white transition-colors">Estruturação de Ativos</a></li>
+            <li><a href="#metodologia" class="hover:text-white transition-colors">Engenharia da Manutenção</a></li>
+            <li><a href="#solucao" class="hover:text-white transition-colors">Planos Preventivos</a></li>
+            <li><a href="#solucao" class="hover:text-white transition-colors">Gestão de Estoque Técnico</a></li>
+            <li><a href="#solucao" class="hover:text-white transition-colors">Governança da Manutenção</a></li>
+            <li><a href="#indicadores" class="hover:text-white transition-colors">Indicadores de Performance</a></li>
+            <li><a href="#metodologia" class="hover:text-white transition-colors">Treinamentos Operacionais</a></li>
+            <li class="sm:col-span-2"><a href="#plataforma" class="text-provexis-red hover:text-provexis-ember font-medium transition-colors">Plataforma PROVEXIS PCM</a></li>
+          </ul>
+        </div>
+
+        <!-- Contato Institucional -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-mono text-xs font-bold uppercase tracking-wider text-white">Contato & Localização</h4>
+          <ul class="space-y-2.5 text-sm text-provexis-silver">
+            <li class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-provexis-red shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span>São José dos Pinhais - PR</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-provexis-red shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <a href="mailto:contato@provexis.com.br" class="hover:text-white transition-colors">contato@provexis.com.br</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-provexis-red shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+              <a href="https://www.provexis.com.br" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">www.provexis.com.br</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-provexis-steel">
+        <p>© <span id="current-year"></span> PROVEXIS PCM — Todos os direitos reservados.</p>
+        <p class="font-mono">Performance que se prova.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       MODAL INTERATIVO: SOLICITAR DIAGNÓSTICO
+  ========================================================== -->
+  <div id="diagnostico-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="relative w-full max-w-xl rounded-2xl brushed-metal top-telemetry-bar p-6 sm:p-8 shadow-2xl max-h-[92vh] overflow-y-auto">
+      <button type="button" onclick="closeDiagnosticoModal()" class="absolute top-4 right-4 p-2 rounded-lg text-provexis-silver hover:text-white hover:bg-provexis-black border border-transparent hover:border-provexis-border transition-colors cursor-pointer" aria-label="Fechar janela">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <div class="mb-6 pr-8">
+        <span class="font-mono text-[11px] font-semibold uppercase tracking-wider text-provexis-red">DIAGNÓSTICO EXECUTIVO PROVEXIS PCM</span>
+        <h3 id="modal-title" class="font-display font-bold text-2xl text-white mt-1">Solicitar Diagnóstico</h3>
+        <p class="text-sm text-provexis-silver mt-1">Avalie o nível de maturidade do seu PCM e receba um plano estruturado para sua planta.</p>
+      </div>
+
+      <form id="modal-diagnostico-form" class="space-y-4" onsubmit="handleDiagnosticoSubmit(event, 'modal')">
+        <input type="hidden" id="modal-origem" name="origem" value="Site PROVEXIS PCM" />
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="modal-nome" class="block text-xs font-mono uppercase text-provexis-silver mb-1.5">Nome Completo *</label>
+            <input type="text" id="modal-nome" name="nome" required placeholder="Seu nome" class="w-full px-4 py-3 rounded-xl bg-provexis-black border border-provexis-border text-white text-sm placeholder-provexis-steel/60 focus:outline-none focus:border-provexis-red" />
+          </div>
+          <div>
+            <label for="modal-cargo" class="block text-xs font-mono uppercase text-provexis-silver mb-1.5">Cargo *</label>
+            <select id="modal-cargo" name="cargo" required class="w-full px-4 py-3 rounded-xl bg-provexis-black border border-provexis-border text-white text-sm focus:outline-none focus:border-provexis-red">
+              <option value="">Selecione</option>
+              <option value="Gerente de Manutenção">Gerente de Manutenção</option>
+              <option value="Supervisor de Manutenção">Supervisor de Manutenção</option>
+              <option value="Coordenador PCM">Coordenador PCM</option>
+              <option value="Gerente Industrial">Gerente Industrial</option>
+              <option value="Diretor Industrial">Diretor Industrial</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="modal-empresa" class="block text-xs font-mono uppercase text-provexis-silver mb-1.5">Empresa *</label>
+            <input type="text" id="modal-empresa" name="empresa" required placeholder="Nome da indústria" class="w-full px-4 py-3 rounded-xl bg-provexis-black border border-provexis-border text-white text-sm placeholder-provexis-steel/60 focus:outline-none focus:border-provexis-red" />
+          </div>
+          <div>
+            <label for="modal-telefone" class="block text-xs font-mono uppercase text-provexis-silver mb-1.5">Telefone / WhatsApp *</label>
+            <input type="tel" id="modal-telefone" name="telefone" required placeholder="(41) 99999-9999" class="w-full px-4 py-3 rounded-xl bg-provexis-black border border-provexis-border text-white text-sm placeholder-provexis-steel/60 focus:outline-none focus:border-provexis-red" />
+          </div>
+        </div>
+
+        <div>
+          <label for="modal-email" class="block text-xs font-mono uppercase text-provexis-silver mb-1.5">E-mail Corporativo *</label>
+          <input type="email" id="modal-email" name="email" required placeholder="voce@empresa.com.br" class="w-full px-4 py-3 rounded-xl bg-provexis-black border border-provexis-border text-white text-sm placeholder-provexis-steel/60 focus:outline-none focus:border-provexis-red" />
+        </div>
+
+        <div>
+          <label for="modal-servico" class="block text-xs font-mono uppercase text-provexis-silver mb-1.5">Necessidade Prioritária *</label>
+          <select id="modal-servico" name="servico" required class="w-full px-4 py-3 rounded-xl bg-provexis-black border border-provexis-border text-white text-sm focus:outline-none focus:border-provexis-red">
+            <option value="Implantação Completa de PCM + Plataforma">Implantação Completa de PCM + Plataforma</option>
+            <option value="Estruturação de Ativos">Estruturação de Ativos</option>
+            <option value="Engenharia da Manutenção e Planos Preventivos">Engenharia da Manutenção e Planos Preventivos</option>
+            <option value="Gestão de Estoque Técnico">Gestão de Estoque Técnico</option>
+            <option value="Governança da Manutenção e Indicadores">Governança da Manutenção e Indicadores</option>
+            <option value="Plataforma PROVEXIS PCM">Plataforma PROVEXIS PCM</option>
+          </select>
+        </div>
+
+        <button type="submit" class="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-provexis-red to-provexis-ember hover:from-provexis-ember hover:to-provexis-red text-white font-bold text-base shadow-provexis-glow transition-all cursor-pointer">
+          Confirmar Solicitação de Diagnóstico
+        </button>
+      </form>
+
+      <!-- Feedback de Sucesso Modal -->
+      <div id="modal-form-success" class="hidden p-6 rounded-xl bg-emerald-500/10 border border-emerald-500/40 text-center space-y-3">
+        <div class="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+        </div>
+        <h4 class="font-display font-bold text-xl text-white">Diagnóstico Solicitado com Sucesso!</h4>
+        <p class="text-sm text-provexis-silver" id="modal-success-msg"></p>
+        <div class="pt-2">
+          <button type="button" onclick="closeDiagnosticoModal()" class="px-6 py-2.5 rounded-lg bg-provexis-black text-white text-sm font-semibold border border-provexis-border hover:border-provexis-red cursor-pointer">
+            Concluir
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       JAVASCRIPT: INTERATIVIDADE, ABAS, MODAL & ANIMAÇÕES
+  ========================================================== -->
+  <script>
+    // Ano atual dinâmico no rodapé
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Menu Mobile Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('menu-icon-open');
+    const iconClose = document.getElementById('menu-icon-close');
+
+    function toggleMobileMenu(forceClose = false) {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (forceClose || !isHidden) {
+        mobileMenu.classList.add('hidden');
+        iconOpen.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      } else {
+        mobileMenu.classList.remove('hidden');
+        iconOpen.classList.add('hidden');
+        iconClose.classList.remove('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', 'true');
+      }
+    }
+
+    mobileMenuBtn.addEventListener('click', () => toggleMobileMenu());
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => toggleMobileMenu(true));
+    });
+
+    // Abas Interativas da Seção Plataforma PROVEXIS PCM
+    const platformTabsData = {
+      dashboard: {
+        tag: 'MÓDULO EXECUTIVO // REAL-TIME',
+        title: 'Visão Gerencial e Controle Multi Planta',
+        desc: 'Acompanhe MTBF, MTTR, disponibilidade física, backlog e cumprimento das preventivas em tempo real, com filtros por unidade, linha de produção e criticidade.',
+        placeholder: '[ESPAÇO RESERVADO PARA SCREENSHOT REAL DO SISTEMA — DASHBOARD EXECUTIVO PROVEXIS PCM]',
+        visualHtml: `
+          <div class="grid grid-cols-3 gap-3 font-mono">
+            <div class="p-3 rounded-lg bg-provexis-black border border-provexis-border">
+              <span class="text-[10px] text-provexis-steel block">O.S. ABERTAS</span>
+              <span class="text-xl font-bold text-white">24</span>
+            </div>
+            <div class="p-3 rounded-lg bg-provexis-black border border-provexis-border">
+              <span class="text-[10px] text-provexis-steel block">PREVENTIVAS MÊS</span>
+              <span class="text-xl font-bold text-emerald-400">96%</span>
+            </div>
+            <div class="p-3 rounded-lg bg-provexis-black border border-provexis-border">
+              <span class="text-[10px] text-provexis-steel block">CUSTO MRO</span>
+              <span class="text-xl font-bold text-white">-18%</span>
+            </div>
+          </div>
+          <div class="p-4 rounded-lg bg-provexis-black border border-provexis-border">
+            <div class="flex justify-between text-[11px] font-mono text-provexis-silver mb-3">
+              <span>CUMPRIMENTO PMP vs CORRETIVAS (ÚLTIMOS 6 MESES)</span>
+              <span class="text-provexis-red">META ≥ 90%</span>
+            </div>
+            <div class="grid grid-cols-6 gap-2 items-end h-28 pt-2">
+              <div class="flex flex-col items-center gap-1"><div class="w-full bg-provexis-red/40 rounded-t h-12"></div><span class="text-[10px] font-mono text-provexis-steel">M1</span></div>
+              <div class="flex flex-col items-center gap-1"><div class="w-full bg-provexis-red/55 rounded-t h-16"></div><span class="text-[10px] font-mono text-provexis-steel">M2</span></div>
+              <div class="flex flex-col items-center gap-1"><div class="w-full bg-provexis-red/70 rounded-t h-20"></div><span class="text-[10px] font-mono text-provexis-steel">M3</span></div>
+              <div class="flex flex-col items-center gap-1"><div class="w-full bg-provexis-red/85 rounded-t h-22"></div><span class="text-[10px] font-mono text-provexis-steel">M4</span></div>
+              <div class="flex flex-col items-center gap-1"><div class="w-full bg-provexis-red rounded-t h-24"></div><span class="text-[10px] font-mono text-provexis-steel">M5</span></div>
+              <div class="flex flex-col items-center gap-1"><div class="w-full bg-emerald-400 rounded-t h-28"></div><span class="text-[10px] font-mono text-white">M6</span></div>
+            </div>
+          </div>
+        `
+      },
+      ativos: {
+        tag: 'MÓDULO 01 // ENGENHARIA DE ATIVOS',
+        title: 'Árvore de Ativos, Tagueamento e Criticidade ABC',
+        desc: 'Visualize a hierarquia completa (Planta → Área → Setor → Equipamento → Componente), fichas técnicas, histórico de intervenções e lista de sobressalentes vinculados.',
+        placeholder: '[ESPAÇO RESERVADO PARA SCREENSHOT REAL DO SISTEMA — ÁRVORE DE ATIVOS E FICHA TÉCNICA]',
+        visualHtml: `
+          <div class="space-y-2.5 font-mono text-xs">
+            <div class="p-3 rounded-lg bg-provexis-black border border-provexis-border flex justify-between items-center">
+              <span class="text-white">🏭 PLANTA-SJP // UNIDADE INDUSTRIAL 01</span>
+              <span class="px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-400 text-[10px]">142 ATIVOS</span>
+            </div>
+            <div class="ml-4 p-3 rounded-lg bg-provexis-black border border-provexis-border flex justify-between items-center">
+              <span class="text-provexis-silver">↳ ÁREA: EXTRUSÃO & TERMOFORMAGEM</span>
+              <span class="px-2 py-0.5 rounded bg-provexis-red/15 text-provexis-red text-[10px]">CRITICIDADE A</span>
+            </div>
+            <div class="ml-8 p-3 rounded-lg bg-provexis-black border border-provexis-red/40 flex justify-between items-center">
+              <span class="text-white font-semibold">↳ TAG: EXT-004 • Extrusora Dupla Rosca</span>
+              <span class="text-emerald-400 text-[10px]">PMP + LALV ATIVOS</span>
+            </div>
+            <div class="ml-12 p-2.5 rounded-lg bg-provexis-black/70 border border-provexis-border text-provexis-steel flex justify-between">
+              <span>• Redutor Principal / Motor 75CV / Painel CLP</span>
+              <span>3 COMPONENTES</span>
+            </div>
+          </div>
+        `
+      },
+      os: {
+        tag: 'MÓDULO 02 // EXECUÇÃO & RASTREABILIDADE',
+        title: 'Ordens de Serviço Padronizadas e Checklists',
+        desc: 'Controle total do ciclo de vida da O.S.: abertura, triagem PCM, alocação de técnicos, baixa automática de materiais do estoque técnico e apontamento de horas.',
+        placeholder: '[ESPAÇO RESERVADO PARA SCREENSHOT REAL DO SISTEMA — FLUXO DE ORDENS DE SERVIÇO]',
+        visualHtml: `
+          <div class="space-y-2.5 font-mono text-xs">
+            <div class="p-3.5 rounded-lg bg-provexis-black border border-provexis-border flex items-center justify-between">
+              <div>
+                <span class="text-provexis-red font-bold">#OS-2048</span>
+                <span class="text-white ml-2">Preventiva Mensal — Prensa Hidráulica PR-02</span>
+              </div>
+              <span class="px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-400 text-[10px]">CONCLUÍDA</span>
+            </div>
+            <div class="p-3.5 rounded-lg bg-provexis-black border border-provexis-border flex items-center justify-between">
+              <div>
+                <span class="text-amber-400 font-bold">#OS-2049</span>
+                <span class="text-white ml-2">Inspeção Termográfica — Quadro Geral QGBT-01</span>
+              </div>
+              <span class="px-2 py-0.5 rounded bg-amber-500/15 text-amber-400 text-[10px]">EM EXECUÇÃO</span>
+            </div>
+            <div class="p-3.5 rounded-lg bg-provexis-black border border-provexis-border flex items-center justify-between">
+              <div>
+                <span class="text-provexis-silver font-bold">#OS-2050</span>
+                <span class="text-white ml-2">Lubrificação Quinzenal — Linha Transportadora LT-05</span>
+              </div>
+              <span class="px-2 py-0.5 rounded bg-provexis-graphite text-provexis-silver text-[10px]">PROGRAMADA</span>
+            </div>
+          </div>
+        `
+      },
+      solicitante: {
+        tag: 'MÓDULO 03 // INTEGRAÇÃO PRODUÇÃO ↔ MANUTENÇÃO',
+        title: 'Portal do Solicitante Ágil e Sem Ruídos',
+        desc: 'Elimine pedidos informais por mensagens ou papel. A operação abre chamados em segundos com prioridade, sintoma e equipamento identificado, alimentando o SLA.',
+        placeholder: '[ESPAÇO RESERVADO PARA SCREENSHOT REAL DO SISTEMA — PORTAL DO SOLICITANTE]',
+        visualHtml: `
+          <div class="p-4 rounded-lg bg-provexis-black border border-provexis-border space-y-3 font-mono text-xs">
+            <div class="flex items-center justify-between border-b border-provexis-border pb-2.5">
+              <span class="text-white font-semibold">NOVA SOLICITAÇÃO DE SERVIÇO</span>
+              <span class="text-provexis-red">SLA MONITORADO</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2.5">
+              <div class="p-2.5 rounded bg-provexis-graphite border border-provexis-border">
+                <span class="text-[10px] text-provexis-steel block">ATIVO SELECIONADO</span>
+                <span class="text-white">INJ-08 • Injetora 350T</span>
+              </div>
+              <div class="p-2.5 rounded bg-provexis-graphite border border-provexis-border">
+                <span class="text-[10px] text-provexis-steel block">PRIORIDADE</span>
+                <span class="text-amber-400">ALTA • PARADA PARCIAL</span>
+              </div>
+            </div>
+            <div class="p-2.5 rounded bg-provexis-graphite border border-provexis-border text-provexis-silver">
+              Sintoma: Oscilação de pressão hidráulica no ciclo de fechamento.
+            </div>
+          </div>
+        `
+      }
+    };
+
+    function switchPlatformTab(tabKey) {
+      const data = platformTabsData[tabKey];
+      if (!data) return;
+
+      // Atualiza botões das abas
+      document.querySelectorAll('.platform-tab-btn').forEach(btn => {
+        btn.classList.remove('bg-provexis-red', 'text-white');
+        btn.classList.add('bg-provexis-black', 'text-provexis-silver', 'border', 'border-provexis-border');
+      });
+      const activeBtn = document.getElementById(`tab-btn-${tabKey}`);
+      activeBtn.classList.remove('bg-provexis-black', 'text-provexis-silver', 'border', 'border-provexis-border');
+      activeBtn.classList.add('bg-provexis-red', 'text-white');
+
+      // Renderiza conteúdo da aba
+      const container = document.getElementById('platform-preview-content');
+      container.innerHTML = `
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+          <div class="lg:col-span-5 space-y-4">
+            <span class="font-mono text-xs text-provexis-red uppercase">${data.tag}</span>
+            <h3 class="font-display font-bold text-2xl text-white">${data.title}</h3>
+            <p class="text-sm text-provexis-silver leading-relaxed">${data.desc}</p>
+            <div class="p-3.5 rounded-lg bg-provexis-graphite/80 border border-dashed border-provexis-steel/50 text-xs font-mono text-provexis-silver">
+              ${data.placeholder}
+            </div>
+          </div>
+          <div class="lg:col-span-7 rounded-xl bg-provexis-graphite border border-provexis-border p-4 sm:p-5 space-y-4">
+            ${data.visualHtml}
+          </div>
+        </div>
+      `;
+    }
+
+    // Controle do Modal de Solicitação de Diagnóstico
+    const modal = document.getElementById('diagnostico-modal');
+    function openDiagnosticoModal(origem = 'CTA Página') {
+      document.getElementById('modal-origem').value = origem;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+      toggleMobileMenu(true);
+    }
+
+    function closeDiagnosticoModal() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeDiagnosticoModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        closeDiagnosticoModal();
+      }
+    });
+
+    // Submissão dos Formulários de Diagnóstico
+    function handleDiagnosticoSubmit(event, type) {
+      event.preventDefault();
+      const form = document.getElementById(`${type}-diagnostico-form`);
+      const successBox = document.getElementById(`${type}-form-success`);
+      const successMsg = document.getElementById(`${type}-success-msg`);
+
+      const nome = form.querySelector('[name="nome"]').value.trim();
+      const empresa = form.querySelector('[name="empresa"]').value.trim();
+      const servico = form.querySelector('[name="servico"]').value;
+      const protocolo = 'PVX-' + Math.floor(100000 + Math.random() * 900000);
+
+      successMsg.innerHTML = `Olá, <strong class="text-white">${nome}</strong>. Recebemos a solicitação para <strong class="text-white">${empresa}</strong> (${servico}).<br/><span class="inline-block mt-2 font-mono text-xs text-emerald-400">Protocolo: ${protocolo} • Em breve nossa engenharia entrará em contato.</span>`;
+
+      form.classList.add('hidden');
+      successBox.classList.remove('hidden');
+    }
+
+    function resetForm(type) {
+      const form = document.getElementById(`${type}-diagnostico-form`);
+      const successBox = document.getElementById(`${type}-form-success`);
+      form.reset();
+      successBox.classList.add('hidden');
+      form.classList.remove('hidden');
+    }
+
+    // Animações de Entrada Suaves com IntersectionObserver
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -40px 0px'
+    };
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+      revealObserver.observe(el);
+    });
+  </script>
+</body>
+</html>
